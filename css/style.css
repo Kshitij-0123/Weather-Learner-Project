@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* loading page */
+.container-1{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    background-color: #3ab0ffc6;
+    position: relative;
+    overflow: hidden;
+}
+.main{
+    display: flex;
+    transform: translateY(-200px);
+    animation: y-axis 2s infinite ease-in-out;
+    position: absolute;
+    left:400px;
+}
+.main h1{
+    padding: 10px 10px;
+}
+.fa-sun{
+    animation: x-axis 3s infinite linear;
+    color: orangered;
+}
+#load span{
+    animation: dot 1s linear infinite;
+}
+@keyframes dot {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes x-axis {
+    50%{
+        transform: translateX(700px) rotate(360deg);
+    }
+}
+@keyframes y-axis {
+    50%{
+        transform: translateY(200px);
+    }
+}
+#load{
+    font-family:'IBM Plex Mono', monospace;;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.cloud1,.cloud2,.cloud3,.cloud4,.cloud5,.cloud6{
+    /* position: relative; */
+    top:50px;
+    width:250px;
+    height:100px;
+    background-color: white;
+    border-radius: 100px;
+}
+.cloud1::before,.cloud2::before,.cloud3::before,.cloud4::before,.cloud5::before,.cloud6::before{
+    content: '';
+    position: absolute;
+    top:-50px;
+    left:30px;
+    width:100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 40px 0 0 10px white;
+}
+.cloud1{
+    position: absolute;
+    top:150px;
+    left:300px;
+    z-index: 10;
+}
+.cloud2{
+    position: absolute;
+    top:30px;
+    right:350px;
+}
+.cloud3{
+    position: absolute;
+    top:550px;
+    left:300px;
+    z-index: 10;
+}
+.cloud4{
+    position: absolute;
+    left:-30px;
+    top:400px;
+}
+.cloud5{
+    position: absolute;
+    right:300px;
+    top:680px;
+}
+.cloud6{
+    position: absolute;
+    right: 250px;
+    top:350px;
+    z-index: 10;
+}
+/* weather app css */
+.container-app{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.container-app ul{
+    display: flex;
+    justify-content: right;
+    list-style-type: none;
+    background-color: white;
+    box-shadow: 0px 1px 10px #888888;
+}
+.container-app li{
+    padding: 10px 20px;
+}
+.container-app li a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.search-div{
+    display: flex;
+    justify-content: space-between;
+}
+.search-div h1{
+    margin-top: 15px;
+    margin-left: 20px;
+    font-family: 'VT323', monospace;
+    color: orangered;
+    padding: 0 10px;
+}
+.container-app .search{
+    display: flex;
+    justify-content: right;
+}
+.search button{
+    border: none;
+    background-color: white;
+}
+select option[value=""]{
+    height: 10px;
+}
+.search .item{
+    margin: 20px 10px;
+}
+select{
+    margin: auto 0 auto 0;
+    height: 40px;
+}
+button:hover{
+    opacity: 0.4;
+}
+.clicked-s{
+    opacity: 0.4;
+}
+input{
+    padding: 10px;
+    border-radius: 20px;
+    width: 220px;
+    border: 2px solid lightgrey;
+}
+.image{
+    width:100%;
+    height: 600px;
+    background-size: cover;
+    object-fit: cover;
+    margin-top: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.latlon{
+    position: absolute;
+    width:250px;
+    height: 250px;
+    left: 42%;
+    top:15%;
+    text-align: center;
+}
+.latC{
+    border-radius: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.latC h2{
+    display: inline;
+    margin: 10px 0;
+    font-family: 'Major Mono Display', monospace;
+    line-height: 1.5;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;
+    color: black;
+}
+.image .mainP h1{
+    margin: 20px 0 0 20px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 250%;
+    text-align: left;
+}
+.mainP p{
+    text-align: left;
+    margin: 20px 0 0 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+.mainP
+{
+    min-height: 200px;
+}
+.all-para{
+    min-height: 250px;
+    display: flex;
+    justify-content:space-evenly;
+}
+.temp,.wind-speed,.description,.pres-hum{
+    margin: 30px;
+    padding: 20px;
+    min-width: 300px;
+    border-radius: 30px;
+    overflow: hidden;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.description img{
+    width:50%;
+    margin: 0 auto;
+}
+.chart_link{
+    margin-top: 100px;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+.chart_link div{
+    margin: 80px auto;
+    height: 200px;
+    width:50%;
+}
+.chart_link img{
+    width:20%;
+}
+.chart img{
+    float: left;
+    margin-right:50px;
+}
+.chart p{
+    margin-left:150px; ;
+}
+.link img{
+    float: right;
+}
+.chart_link p{
+    margin-top: 20px;
+    width:70%;
+}
+.chart,.link{
+    text-align: justify;
+}
