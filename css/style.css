@@ -186,6 +186,8 @@ input{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    color: white;
+    
 }
 .latlon{
     position: absolute;
@@ -202,21 +204,22 @@ input{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+    opacity: 0.7;
 }
 .glass{
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    background: linear-gradient(to bottom,rgba(147, 139, 139, 0.5), rgba(169, 158, 158, 0.4));;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border:1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
+/* linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)) */
 .latC h3{
     display: inline;
     margin: 10px 0;
     font-family: 'Major Mono Display', monospace;
     line-height: 1.5;
-    color: black;
+    color: white;
 }
 .image .mainP h1{
     margin: 20px 0 0 20px;
@@ -232,7 +235,11 @@ input{
 .mainP
 {
     min-height: 200px;
+    text-shadow: 0 0 5px black;
 }
+/* .mainP h1{
+
+} */
 .all-para{
     min-height: 250px;
     display: flex;
