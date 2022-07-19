@@ -18,7 +18,7 @@ btn.addEventListener("click",(event)=>{
     cityV=city.value;
     let units=unit.value;
     console.log(units);
-    fetch(URL+apiKey+"&q="+cityV+"&units="+units+"#").then((res)=>{return res.json()}).then((data)=>{addImage(data.weather[0].main); displayData(data)}).catch((error) => console.log(error.message));
+    fetch(URL+apiKey+"&q="+cityV+"&units="+units+"#").then((res)=>{return res.json()}).then((data)=>{addImage(data.weather[0].main); displayData(data,units)}).catch((error) => console.log(error.message));
     city.value="";
     setTimeout(()=>{
         btn.classList.remove("clicked-s");
@@ -28,72 +28,79 @@ btn.addEventListener("click",(event)=>{
 function addImage(mainW){
     let image=document.querySelector(".image");
     let src="";
+    let pos="center";
     switch (mainW) {
         case "Clouds":
-        src="../images/Cloud.avif";
+        src="../images/Cloud.jpg";
         break;
         case "Clear":
-        src="../images/Clear.avif";
+        src="../images/Clear.png";
         break;
         case "Drizzle":
-        src="../images/Drizzle.avif";
+        src="../images/drizzle1.jpg";
         break;
         case "Dust":
-        src="../images/Dusty.avif";
+        src="../images/Dust.jpg";
         break;
         case "Fog":
-        src="../images/Fog.avif";
+        src="../images/fog1.jpg";
         break;
         case "Haze":
-        src="../images/Haze.avif";
+        src="../images/Haze.jpg";
         break;
         case "Mist":
-        src="../images/Mist.avif";
+        src="../images/Mist.jpg";
         break;
         case "Rain":
-        src="../images/Rain.avif";
+        src="../images/Rain2.jpg";
         break;
         case "Sand":
-        src="../images/Sand.avif";
+        src="../images/Sand.jpg";
         break;
         case "Smoke":
-        src="../images/Smoke.avif";
+        src="../images/Smoke.jpg";
         break;
         case "Snow":
-        src="../images/Snow.avif";
+        src="../images/Snow.jpg";
+        pos="bottom";
         break;
         case "Thunderstorm":
-        src="../images/Thunderstorm.avif";
+        src="../images/Thunderstorm.jpg";
+        pos="bottom";
         break;
         default: src="";
         break;
     }
-    console.log(src,mainW);
+    document.querySelector(".image img").setAttribute("src",src);
     image.style.backgroundImage="url("+src+")";
     image.style.backgroundSize="cover";
-    image.style.backgroundPosition="center";
+    image.style.backgroundPosition=pos;
+    image.opacity="0.4";
 }
-function displayData(APID){
+function displayData(APID,units){
     //for temperature
+    let unitT=tempSet(units);
+    let unitS=speedSet(units);
     var temp=document.querySelectorAll(".temp h3");
-    temp[0].innerHTML="Temperature: "+APID.main.temp;
-    temp[1].innerHTML="Minimum temperature: "+APID.main.temp_min;
-    temp[2].innerHTML="Maximum temperature: "+APID.main.temp_max;
+    temp[0].innerHTML="Temperature: "+APID.main.temp+unitT;
+    temp[1].innerHTML="Minimum temperature: "+APID.main.temp_min+unitT;
+    temp[2].innerHTML="Maximum temperature: "+APID.main.temp_max+unitT;
     //for wind speed
     var wind=document.querySelectorAll(".wind-speed h3");
-    wind[0].innerHTML="Wind speed: "+APID.wind.speed;
-    wind[1].innerHTML="Degree: "+APID.wind.deg;
-    wind[2].innerHTML="gust speed: "+APID.wind.gust;
+    wind[0].innerHTML="Wind speed: "+APID.wind.speed+unitS;
+    wind[1].innerHTML="Degree: "+APID.wind.deg+"°";
+    wind[2].innerHTML="gust speed: "+APID.wind.gust+unitS;
     //for description
     var des=document.querySelectorAll(".description h3");
-    des[0].innerHTML="Description: "+APID.weather[0].description;
+    des[0].innerHTML=APID.weather[0].description;
+    des[0].style.textAlign="center";
     var icon=APID.weather[0].icon;
     var ico=document.querySelector(".description img");
     ico.setAttribute("src",imageURL+icon+"@2x.png");
     //for pressure and humidity
     var ph=document.querySelectorAll(".pres-hum h3");
-    ph[0].innerHTML="Pressure: "+APID.main.pressure;
-    ph[1].innerHTML="Humidity: "+APID.main.humidity;
+    ph[0].innerHTML="Pressure: "+APID.main.pressure+" mbar";
+    ph[1].innerHTML="Humidity: "+APID.main.humidity+"%";
     //fpr main
     var m=document.querySelector(".mainP h1");
     var d=document.querySelector(".mainP p");
@@ -107,12 +114,30 @@ window.addEventListener("load",()=>{
     navigator.geolocation.getCurrentPosition((position)=>{
         let lat=position.coords.latitude;
         let lon=position.coords.longitude;
-        var h2Ar=document.querySelectorAll(".latC h2");
-        h2Ar[0].innerHTML=h2Ar[0].innerHTML+" "+Math.round(lat)+"°";
-        h2Ar[1].innerHTML=h2Ar[1].innerHTML+" "+Math.round(lon)+"°";
-        urlLL="https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid="+apiKey;
-        fetch(urlLL).then((res)=>{return res.json()}).then((data)=>{addImage(data.weather[0].main); displayData(data)}).catch((error) => console.log(error.message));
+        var h2Ar=document.querySelectorAll(".latC h3");
+        h2Ar[0].innerHTML=h2Ar[0].innerHTML+parseFloat(lat).toFixed(2)+"°";
+        h2Ar[1].innerHTML=h2Ar[1].innerHTML+Math.round(lon).toFixed(2)+"°";
+        urlLL="https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid="+apiKey+"&units=metric";
+        fetch(urlLL).then((res)=>{return res.json()}).then((data)=>{addImage(data.weather[0].main); displayData(data,"metric")}).catch((error) => console.log(error.message));
     });
     
 
 });
+function tempSet(value){
+    let t="";
+    if(value=="imperial")
+        t="°F";
+    else if(value=="standard")
+        t="K";
+    else
+        t="°C";
+    return t;
+}
+function speedSet(value){
+    let v="";
+    if(value=="standard" || value=="metric")
+        v="m/s";
+    else
+        v="MPH";
+    return v;
+}
