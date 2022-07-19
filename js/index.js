@@ -101,12 +101,14 @@ function displayData(APID,units){
     var ph=document.querySelectorAll(".pres-hum h3");
     ph[0].innerHTML="Pressure: "+APID.main.pressure+" mbar";
     ph[1].innerHTML="Humidity: "+APID.main.humidity+"%";
-    //fpr main
+    //for main
     var m=document.querySelector(".mainP h1");
     var d=document.querySelector(".mainP p");
     var date=new Date().toDateString();
     d.innerHTML=date;
     m.innerHTML=APID.weather[0].main;
+    //for position
+    posFinder(APID.coord.lat,APID.coord.lon);
     
 }
 window.addEventListener("load",()=>{
@@ -114,15 +116,18 @@ window.addEventListener("load",()=>{
     navigator.geolocation.getCurrentPosition((position)=>{
         let lat=position.coords.latitude;
         let lon=position.coords.longitude;
-        var h2Ar=document.querySelectorAll(".latC h3");
-        h2Ar[0].innerHTML=h2Ar[0].innerHTML+parseFloat(lat).toFixed(2)+"°";
-        h2Ar[1].innerHTML=h2Ar[1].innerHTML+Math.round(lon).toFixed(2)+"°";
+        posFinder(lat,lon);
         urlLL="https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid="+apiKey+"&units=metric";
         fetch(urlLL).then((res)=>{return res.json()}).then((data)=>{addImage(data.weather[0].main); displayData(data,"metric")}).catch((error) => console.log(error.message));
     });
     
 
 });
+function posFinder(lat,lon){
+    var h2Ar=document.querySelectorAll(".latC h3");
+        h2Ar[0].innerHTML="Lattitude:"+parseFloat(lat).toFixed(2)+"°";
+        h2Ar[1].innerHTML="Longitude:"+parseFloat(lon).toFixed(2)+"°";
+}
 function tempSet(value){
     let t="";
     if(value=="imperial")
