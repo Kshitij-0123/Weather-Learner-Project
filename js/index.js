@@ -71,7 +71,6 @@ function addImage(mainW){
         default: src="";
         break;
     }
-    document.querySelector(".image img").setAttribute("src",src);
     image.style.backgroundImage="url("+src+")";
     image.style.backgroundSize="cover";
     image.style.backgroundPosition=pos;
