@@ -11,6 +11,11 @@ cont2.style.display="none";
 setTimeout(function (){
     cont2.style.display="block";
     cont1.style.display="none";
+    setTimeout(function (){
+        let sky=document.querySelectorAll(".sky");
+        for(let i=0;i<sky.length;i++)
+            sky[i].style.display="none";
+    },3000);
 },6000);
 btn.addEventListener("click",(event)=>{
     btn.classList.add("clicked-s");
@@ -52,7 +57,7 @@ function addImage(mainW){
         src="./images/Mist.jpg";
         break;
         case "Rain":
-        src="./images/Rain2.jpg";
+        src="./images/Rain3.jpg";
         break;
         case "Sand":
         src="./images/Sand.jpg";

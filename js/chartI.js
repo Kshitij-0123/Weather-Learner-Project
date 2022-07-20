@@ -8,12 +8,32 @@ window.addEventListener("load",()=>{
     },function (){
         alert("Cannot get location");
     },{timeout:20000, enableHighAccuracy:true});
+    let cont2=document.querySelector(".container-app");
+    let cont1=document.querySelector(".container-1");
+    cont2.style.display="none";
+    setTimeout(function (){
+        cont2.style.display="block";
+        cont1.style.display="none";
+    },6000);
 });
-
+let city=document.querySelector("input");
+let search=document.querySelector("button");
+search.addEventListener("click",(event)=>{
+    search.classList.add("clicked-s");
+    event.preventDefault();
+    let canD=document.getElementById("lineC");
+    document.querySelector(".chartBox").removeChild(canD);
+    let URL="https://api.openweathermap.org/data/2.5/forecast?q="+city.value+"&cnt=40&appid=baffe54e8405da80be9e6f51f7808cae&units=metric";
+    fetch(URL).then((res)=>{return res.json()}).then((data)=>{exportdata(data)});
+    city.value="";
+    setTimeout(()=>{
+        search.classList.remove("clicked-s");
+    },2000);
+})
 function exportdata(data){
-    const days=new Set();
-    const Temp_main_morn=[];
-    const Temp_main_night=[];
+    let days=new Set();
+    let Temp_main_morn=[];
+    let Temp_main_night=[];
     let imageB="";
     for(let i=0;i<data.list.length;i++){
         let day=data.list[i].dt_txt.slice(0,11);
@@ -29,6 +49,10 @@ function exportdata(data){
     addChartBack(imageB);
     days.delete(allDay[new Date(data.list[0].dt_txt.slice(0,11)).getDay()]);
     const label=Array.from(days);
+    let can=document.createElement("canvas");
+    can.setAttribute("id","lineC");
+    can.setAttribute("width","400px");
+    document.querySelector(".chartBox").appendChild(can);
     var char=document.getElementById("lineC");
     var lineChart=new Chart(char,{
         type: "line",
@@ -59,7 +83,7 @@ function exportdata(data){
                 }
             },
             scales:{
-                y: [{
+                yAxis: [{
                     ticks: {
                         beginAtZero: true
                     }
@@ -95,7 +119,7 @@ function addChartBack(word){
         src="./images/Mist.jpg";
         break;
         case "Rain":
-        src="./images/Rain2.jpg";
+        src="./images/Rain3.jpg";
         break;
         case "Sand":
         src="./images/Sand.jpg";

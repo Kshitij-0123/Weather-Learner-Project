@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="./css/loader.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Weather Learner</title>
   </head>
@@ -30,12 +31,22 @@
       <h1 id="load">loading<span>...</span></h1>
     </div>
     <div class="container-app">
-      <header>
+      <header id="sec-1">
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Chart</a></li>
-            <li><a href="#">About us</a></li>
+            <li><a href="#sec-3">Chart</a></li>
+            <li>
+              <select name="About Us" id="names">
+                <option id="head" selected hidden>About Us</option>
+                <option value="">Abhinay Sinha</option>
+                <option value="">Kshitij Agarwal</option>
+                <option value="">Ravindra Singh</option>
+                <option value="">Kunal Singh</option>
+                <option value="">Vishakha Kalra</option>
+                <option value="">Yashashvi</option>
+              </select>
+            </li>
+            <li><a href="#sec-4">Contact Us</a></li>
           </ul>
         </nav>
       </header>
@@ -48,7 +59,7 @@
             class="form-select form-select-sm"
             aria-label=".form-select-sm example"
           >
-            <option selected disabled>Open this select menu</option>
+            <option selected disabled>Enter the system of unit</option>
             <option value="imperial">imperial</option>
             <option value="metric">metric</option>
             <option value="standard">standard</option>
@@ -82,26 +93,38 @@
             <h3></h3>
             <h3></h3>
             <h3></h3>
+            <div class="sky">
+              <i class="fa-solid fa-cloud fa-4x"></i>
+            </div>
           </div>
           <div class="wind-speed glass">
             <h3></h3>
             <h3></h3>
             <h3></h3>
+            <div class="sky">
+              <i class="fa-solid fa-cloud fa-4x"></i>
+            </div>
           </div>
           <div class="description glass">
             <h3></h3>
             <img src="" alt="image of weather icon" />
+            <div class="sky">
+              <i class="fa-solid fa-cloud fa-4x"></i>
+            </div>
           </div>
           <div class="pres-hum glass">
             <h3></h3>
             <h3></h3>
+            <div class="sky">
+              <i class="fa-solid fa-cloud fa-4x"></i>
+            </div>
           </div>
         </div>
       </div>
-      <div class="chart_link">
+      <div class="chart_link" id="sec-3">
         <div class="chart">
           <img
-            src="./images/line-chart.png"
+            src="./images/bar-chart.gif"
             alt="it is a picture of chart"
             usemap="#mychart"
           />
@@ -124,7 +147,7 @@
         </div>
         <div class="link">
           <img
-            src="./images/earth.png"
+            src="./images/global-warming.gif"
             alt="it is a picture of earth"
             usemap="#mylink"
           />
@@ -135,6 +158,7 @@
               href="https://classic.nullschool.net/#current/wind/primary/waves/overlay=temp/orthographic=87.75,7.57,336/loc=77.899,27.480"
               target="_blank"
               alt=""
+              d
             />
           </map>
           <h2>3D display</h2>
@@ -147,13 +171,16 @@
         </div>
       </div>
       <footer>
-        <div class="foot_main">
+        <div class="foot_main" id="sec-4">
           <p>Contact Us</p>
           <div class="ico_foot">
             <i class="fa-brands fa-twitter fa-2x"></i>
             <i class="fa-brands fa-linkedin fa-2x"></i>
             <i class="fa-solid fa-cloud-sun fa-2x"></i>
             <i class="fa-solid fa-envelope fa-2x"></i>
+          </div>
+          <div class="back_p">
+            <a href="#sec-1"><i class="fa-solid fa-arrow-up fa-2x"></i></a>
           </div>
         </div>
       </footer>
