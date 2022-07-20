@@ -74,41 +74,41 @@ function addChartBack(word){
     let pos="center";
     switch (word) {
         case "Clouds":
-        src="../images/Cloud.jpg";
+        src="./images/Cloud.jpg";
         break;
         case "Clear":
-        src="../images/Clear.png";
+        src="./images/Clear.png";
         break;
         case "Drizzle":
-        src="../images/drizzle1.jpg";
+        src="./images/drizzle1.jpg";
         break;
         case "Dust":
-        src="../images/Dust.jpg";
+        src="./images/Dust.jpg";
         break;
         case "Fog":
-        src="../images/fog1.jpg";
+        src="./images/fog1.jpg";
         break;
         case "Haze":
-        src="../images/Haze.jpg";
+        src="./images/Haze.jpg";
         break;
         case "Mist":
-        src="../images/Mist.jpg";
+        src="./images/Mist.jpg";
         break;
         case "Rain":
-        src="../images/Rain2.jpg";
+        src="./images/Rain2.jpg";
         break;
         case "Sand":
-        src="../images/Sand.jpg";
+        src="./images/Sand.jpg";
         break;
         case "Smoke":
-        src="../images/Smoke.jpg";
+        src="./images/Smoke.jpg";
         break;
         case "Snow":
-        src="../images/Snow.jpg";
+        src="./images/Snow.jpg";
         pos="bottom";
         break;
         case "Thunderstorm":
-        src="../images/Thunderstorm.jpg";
+        src="./images/Thunderstorm.jpg";
         pos="bottom";
         break;
         default: src="";
