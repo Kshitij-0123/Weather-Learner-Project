@@ -1,34 +1,12 @@
 const allDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-window.addEventListener("load", () => {
-    navigator.geolocation.getCurrentPosition((position) => {
-        let lat = position.coords.latitude;
-        let lon = position.coords.longitude;
-        let URL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&cnt=40&appid=baffe54e8405da80be9e6f51f7808cae&units=metric";
-        fetch(URL).then((res) => { return res.json() }).then((data) => { exportdata(data) });
-    }, function () {
-        alert("Cannot get location");
-    }, { timeout: 20000, enableHighAccuracy: true });
-    let cont2 = document.querySelector(".container-app");
-    let cont1 = document.querySelector(".container-1");
-    cont2.style.display = "none";
-    setTimeout(function () {
-        cont2.style.display = "block";
-        cont1.style.display = "none";
-    }, 6000);
-});
+window.addEventListener("load", lat_lon);
 let city = document.querySelector("input");
 let search = document.querySelector("button");
 search.addEventListener("click", (event) => {
-    search.classList.add("clicked-s");
     event.preventDefault();
-    let canD = document.getElementById("lineC");
-    document.querySelector(".chartBox").removeChild(canD);
     let URL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city.value + "&cnt=40&appid=baffe54e8405da80be9e6f51f7808cae&units=metric";
-    fetch(URL).then((res) => { return res.json() }).then((data) => { exportdata(data) });
+    fetch(URL).then((res) => { return res.json() }).then((data) => { canvasD(); exportdata(data); }).catch((error) => { console.log(error.message); alert("Enter valid name"); document.location.reload()});
     city.value = "";
-    setTimeout(() => {
-        search.classList.remove("clicked-s");
-    }, 2000);
 })
 function exportdata(data) {
     let days = new Set();
@@ -142,4 +120,25 @@ function addChartBack(word) {
     image.style.backgroundImage = "url(" + src + ")";
     image.style.backgroundSize = "cover";
     image.style.backgroundPosition = pos;
+}
+function canvasD(){
+    let canD = document.getElementById("lineC");
+    document.querySelector(".chartBox").removeChild(canD);
+}
+function lat_lon(){
+    navigator.geolocation.getCurrentPosition((position) => {
+        let lat = position.coords.latitude;
+        let lon = position.coords.longitude;
+        let URL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&cnt=40&appid=baffe54e8405da80be9e6f51f7808cae&units=metric";
+        fetch(URL).then((res) => { return res.json() }).then((data) => { exportdata(data); });
+    }, function () {
+        alert("Cannot get location");
+    }, { timeout: 20000, enableHighAccuracy: true });
+    let cont2 = document.querySelector(".container-app");
+    let cont1 = document.querySelector(".container-1");
+    cont2.style.display = "none";
+    setTimeout(function () {
+        cont2.style.display = "block";
+        cont1.style.display = "none";
+    }, 6000);
 }

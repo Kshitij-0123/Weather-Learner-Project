@@ -16,14 +16,14 @@ setTimeout(function () {
         for (let i = 0; i < sky.length; i++)
             sky[i].style.display = "none";
     }, 3000);
-}, 1000);
+}, 6000);
 btn.addEventListener("click", (event) => {
     btn.classList.add("clicked-s");
     event.preventDefault();
     cityV = city.value;
     let units = unit.value;
     console.log(units);
-    fetch(URL + apiKey + "&q=" + cityV + "&units=" + units + "#").then((res) => { return res.json() }).then((data) => { addImage(data.weather[0].main); displayData(data, units) }).catch((error) => console.log(error.message));
+    fetch(URL + apiKey + "&q=" + cityV + "&units=" + units + "#").then((res) => { return res.json() }).then((data) => { addImage(data.weather[0].main); displayData(data, units) }).catch((error) => {console.log(error.message); alert("Enter valid name")});
     city.value = "";
     setTimeout(() => {
         btn.classList.remove("clicked-s");
@@ -117,10 +117,11 @@ function displayData(APID, units) {
 }
 window.addEventListener("load", () => {
     var urlLL = "";
-    navigator.geolocation.getCurrentPosition((position) => {
+    window.navigator.geolocation.getCurrentPosition((position) => {
         let lat = position.coords.latitude;
         let lon = position.coords.longitude;
         posFinder(lat, lon);
+        console.log(position);
         urlLL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&units=metric";
         fetch(urlLL).then((res) => { return res.json() }).then((data) => { addImage(data.weather[0].main); displayData(data, "metric") }).catch((error) => console.log(error.message));
     });
