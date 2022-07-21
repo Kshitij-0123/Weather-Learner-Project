@@ -1,7 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Major+Mono+Display&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=VT323&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+SC:wght@300;400;500;600;700&family=El+Messiri&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lobster+Two&family=Mali&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Shadows+Into+Light&display=swap');
@@ -26,91 +22,6 @@ html {
     height: 100vh;
     position: relative;
 }
-/* .container-app ul{
-    display: flex;
-    justify-content: right;
-    list-style-type: none;
-    background-color: #00ADB5;
-    box-shadow: 0px 1px 10px #888888;
-} */
-/* .container-app li a,#head{
-    text-decoration: none;
-    color: #EEEEEE;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
-} */
-/* #names{
-    padding: 10px;
-    border-radius: 10px;
-    color: #EEEEEE;
-    background-color: #393E46;
-    font-weight: 900;
-} */
-/* .container-app li option{
-    font-weight: 900;
-    color: #EEEEEE;
-} */
-/* .container-app li{
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-} */
-/* .container-app li a{
-    text-decoration: none;
-    color: #EEEEEE;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-} */
-/* .search-div{
-    display: flex;
-    justify-content: space-between;
-} */
-/* .search-div h1{
-    margin-top: 15px;
-    margin-left: 20px;
-    margin-right: 50px;
-    font-family: 'VT323', monospace;
-    color: orangered;
-    padding: 0 10px;
-} */
-/* .container-app .search{
-    display: flex;
-    justify-content: right;
-} */
-/* .search button{
-    border: none;
-    background-color: white;
-}
-select option[value=""]{
-    height: 10px;
-}
-.search .item{
-    margin: 20px 10px;
-} */
-
-/* select{
-    color: rgb(124, 124, 124);
-    border: 2px solid lightgrey;
-    margin: auto 30px auto 0;
-    height: 40px;
-    border-radius: 20px;
-    padding: 5px 20px;
-} */
-/* option{
-    color: rgb(54, 54, 54);
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: small;
-} */
-/* button:hover,.clicked-s{
-    opacity: 0.4;
-}
-input{
-    padding: 10px;
-    border-radius: 20px;
-    width: 220px;
-    border: 2px solid lightgrey;
-} */
 .image{
     max-width:100%;
     min-height: 600px;
@@ -146,7 +57,6 @@ input{
     background: linear-gradient(135deg, rgba(47, 47, 47, 0.3), rgba(255, 255, 255, 0));
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
-    /* border:1px solid rgba(255, 255, 255, 0.18); */
     box-shadow: 0 8px 32px 0 rgba(17, 17, 17, 0.527);
     transition: all 0.5s cubic-bezier(0.78, 0.48, 0.11, 1.13);
 }
@@ -157,16 +67,7 @@ input{
 .latC h3{
     display: inline;
     margin: 10px 0;
-    /* font-family: 'Major Mono Display', monospace; */
-    /* font-family: 'Shadows Into Light', cursive; */
-    /* font-family: 'Nunito Sans', sans-serif; */
-    /* font-family: 'Josefin Sans', sans-serif; */
     font-family: 'Cormorant SC', serif;
-    /* font-family: 'Cinzel', serif; */
-    /* font-family: 'Mali', cursive; */
-    /* font-family: 'Alegreya Sans SC', sans-serif; */
-    /* font-family: 'Lobster Two', cursive; */
-    /* font-family: 'El Messiri', sans-serif; */
     line-height: 1.5;
     font-size: 180%;
     color: rgb(214, 214, 214);
@@ -174,13 +75,9 @@ input{
 }
 .image .mainP h1{
     margin: 20px 0 0 20px;
-    /* font-family: 'Roboto Mono', monospace; */
-    /* font-family: 'IBM Plex Mono', monospace; */
     font-family: 'Josefin Sans', sans-serif;
-
     text-shadow: 0px 0 5px rgba(94, 94, 94, 0.379);
     color: rgba(1, 1, 1, 0.79);
-    /* text-transform: uppercase; */
     font-size: 200%;
     text-align: left;
     width:fit-content;
@@ -200,16 +97,10 @@ input{
 
 .mainP p{
     width:fit-content;
-
-    /* font-family: 'Shadows Into Light', cursive; */
-    /* font-family: 'Nunito Sans', sans-serif; */
     font-family: 'Josefin Sans', sans-serif;
-    /* font-family: 'Cormorant SC', serif; */
-    /* font-family: 'Cinzel', serif; */
     text-align: left;
     margin: 20px 0 0 20px;
     transition: transform 0.5s cubic-bezier(0.62, 0.25, 0.34, 1.08);
-    /* font-family: 'Roboto Mono', monospace; */
 }
 .mainP
 {
@@ -226,16 +117,7 @@ input{
     min-height: 190px;
     border-radius: 30px;
     overflow: hidden;
-    /* font-family: 'Major Mono Display', monospace; */
-        /* font-family: 'Shadows Into Light', cursive; */
-    /* font-family: 'Nunito Sans', sans-serif; */
-    /* font-family: 'Josefin Sans', sans-serif; */
-    /* font-family: 'Cormorant SC', serif; */
-    /* font-family: 'Cinzel', serif; */
-    /* font-family: 'Mali', cursive; */
     font-family: 'Alegreya Sans SC', sans-serif;
-    /* font-family: 'Lobster Two', cursive; */
-    /* font-family: 'El Messiri', sans-serif; */
     text-align: center;
     color: azure;
     text-shadow: 0 0 2px rgb(64, 64, 64);
@@ -289,48 +171,16 @@ input{
     width:50%;
     margin: 0 auto;
     transform: rotate(-20deg);
-    /* transition: transform 1s; */
     animation: disc-img 1s cubic-bezier(0.46, 0.04, 0.53, 0.96) forwards infinite alternate;
 }
-/* .description:hover img{
-    animation: disc-img 1s cubic-bezier(0.46, 0.04, 0.53, 0.96) forwards infinite alternate;
-    animation: disc-img-hover 1s cubic-bezier(0.46, 0.04, 0.53, 0.96) forwards infinite alternate;
-} */
 @keyframes disc-img{
     0%{
         transform: rotate(-10deg);
     }
-    /* 25%{
-        transform: rotate(-10deg);
-    }
-    50%{
-        transform: rotate(0deg);
-    }
-    75%{
-        transform: rotate(10deg);
-    } */
     100%{
         transform: rotate(10deg);
     }
 }
-/* @keyframes disc-img-hover{
-    0%{
-        transform:scale(1.05);
-    }
-    25%{
-        transform: rotate(-10deg);
-    }
-    50%{
-        transform: rotate(0deg);
-    }
-    75%{
-        transform: rotate(10deg);
-    }
-    100%{
-        transform:scale(1.05);
-    }
-} */
-
 .chart_link{
     margin-top: 100px;
     height: 65vh;

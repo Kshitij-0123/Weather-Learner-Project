@@ -113,9 +113,6 @@ select:focus > option:checked {
 .fa-solid{
     color:rgba(255, 255, 255, 0.837)
 }
-/* h1{
-    color:rgb(255, 255, 255)
-} */
 #names{
     height: 30px;
     width: fit-content;

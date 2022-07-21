@@ -71,7 +71,6 @@ input{
     overflow: hidden;
   }
   .chartBox {
-    /* margin-top: 100px; */
     width: 80%;
     min-height: 450px;
     padding: 0 auto 0 auto;
@@ -84,7 +83,6 @@ input{
     );
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
-    /* border:1px solid rgba(255, 255, 255, 0.18); */
     box-shadow: 0 8px 32px 0 rgba(17, 17, 17, 0.527);
     transition: all 0.4s cubic-bezier(0.78, 0.48, 0.11, 1.13);
     margin: 0 auto;
