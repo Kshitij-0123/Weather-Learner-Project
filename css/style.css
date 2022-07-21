@@ -100,7 +100,7 @@ html {
 .glass:hover .mainP p,
 .latlon:hover .mainP p {
     width: fit-content;
-    transform: translate(20px);
+    transform: translate(10px);
 }
 
 .image:hover .mainP h1 {
@@ -392,6 +392,12 @@ footer p {
 
     .image:hover .mainP h1 {
         margin: auto;
+    }
+    .all-para{
+        width: 60%;
+    }
+    .mainP {
+        padding: 0;
     }
 }
 

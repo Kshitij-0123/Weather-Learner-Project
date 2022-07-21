@@ -1,59 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon2.ico"
+      type="image/x-icon"
+    />
+    <title>Chart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/loader.css" />
+    <link rel="stylesheet" href="./css/chart.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="./images/favicon2.ico" type="image/x-icon" />
-  <title>Chart</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-  <link rel="stylesheet" href="./css/navbar.css" />
-  <link rel="stylesheet" href="./css/loader.css" />
-  <link rel="stylesheet" href="./css/chart.css" />
-</head>
-
-<body>
-  <div class="main_chart">
-    <div class="container-1 posi_new">
-      <div class="cloud1"></div>
-      <div class="cloud2"></div>
-      <div class="cloud3"></div>
-      <div class="cloud4"></div>
-      <div class="cloud5"></div>
-      <div class="cloud6"></div>
-      <div class="main">
-        <i class="fa-solid fa-sun fa-4x"></i>
+  <body>
+    <div class="main_chart">
+      <div class="container-1 posi_new">
+        <div class="cloud1"></div>
+        <div class="cloud2"></div>
+        <div class="cloud3"></div>
+        <div class="cloud4"></div>
+        <div class="cloud5"></div>
+        <div class="cloud6"></div>
+        <div class="main">
+          <i class="fa-solid fa-sun fa-4x"></i>
+        </div>
+        <h1 id="load">loading<span>...</span></h1>
       </div>
-      <h1 id="load">loading<span>...</span></h1>
-    </div>
-    <div class="container-app">
-      <header id="sec-1">
-        <nav>
-          <h1 class="logo">
-            <span><i class="fa-solid fa-cloud-bolt"></i></span> Weather
-            learner
-          </h1>
-          <div class="search-div">
-            <form class="search">
-              <input id="search" type="text" name="city" value="" placeholder="City Name" />
-              <button class="item" type="submit">
-                <img class="searchico a" src="./images/search.png" alt="" />
-              </button>
-            </form>
-          </div>
-        </nav>
-      </header>
-      <div id="chart_back">
-        <h1>Prediction of 5 days</h1>
-        <div class="chartBox glass"></div>
+      <div class="container-app">
+        <header id="sec-1">
+          <nav>
+            <h1 class="logo">
+              <span><i class="fa-solid fa-cloud-bolt"></i></span> Weather
+              learner
+            </h1>
+            <div class="search-div" style="margin: 0">
+              <form class="search">
+                <input
+                  id="search"
+                  type="text"
+                  name="city"
+                  value=""
+                  placeholder="City Name"
+                />
+                <button class="item" type="submit">
+                  <img class="searchico a" src="./images/search.png" alt="" />
+                </button>
+              </form>
+            </div>
+          </nav>
+        </header>
+        <div id="chart_back">
+          <h1>Prediction of 5 days</h1>
+          <div class="chartBox glass"></div>
+        </div>
       </div>
     </div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"
-    integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="./js/chartI.js"></script>
-</body>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"
+      integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/chartI.js"></script>
+    <script src="./js/logo.js"></script>
+  </body>
 </html>

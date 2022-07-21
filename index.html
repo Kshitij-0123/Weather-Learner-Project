@@ -28,56 +28,50 @@
       </div>
       <h1 id="load">loading<span>...</span></h1>
     </div>
-    <div class="container-app">
-      <header>
-        <nav>
-          <h1 class="logo">
-            <span><i class="fa-solid fa-cloud-bolt"></i></span> Weather learner
-          </h1>
-          <div class="search-div">
-            <form class="search">
-              <input
-                id="search"
-                type="text"
-                name="city"
-                value=""
-                placeholder="City Name"
-              />
-              <button class="item" type="submit">
-                <img class="searchico a" src="./images/search.png" alt="" />
-              </button>
-            </form>
-          </div>
-        </nav>
-        <div class="belo-nav">
-          <div class="select-di">
-            <div class="search-div">
-              <form class="search">
-                <div class="select-div">
-                  <select class="form" aria-label=".form-select-sm example">
-                    <option selected disabled>Enter the system of unit</option>
-                    <option value="imperial">imperial</option>
-                    <option value="metric">metric</option>
-                    <option value="standard">standard</option>
-                  </select>
-                  <span id="select-span"></span>
-                  <button class="item" type="submit"></button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="secondpart">
-            <div class="hre2">
-              <select name="About Us" id="names">
-                <option id="head" selected hidden>About Us</option>
-                <option value="">Abhinay Sinha</option>
-                <option value="">Kshitij Agarwal</option>
-                <option value="">Ravindra Singh</option>
-                <option value="">Kunal Singh</option>
-                <option value="">Vishakha Kalra</option>
-                <option value="">Yashashvi</option>
+  <div class="container-app">
+    <header id="sec-1">
+      <nav>
+        <h1 class="logo">
+          <span><i class="fa-solid fa-cloud-bolt"></i></span> Weather learner
+        </h1>
+        <div class="search-div">
+          <form class="search">
+            <input id="search" type="text" name="city" value="" placeholder="City Name" />
+            <button class="item" type="submit">
+              <img class="searchico a" src="./images/search.png" alt="" />
+            </button>
+          </form>
+        </div>
+      </nav>
+      <button id="collapse-btn">
+        <img class="arrow" src="./images/more.png" alt="">
+      </button>
+      <div class="belo-nav">
+        <div class="select-di">
+          <form class="search">
+            <div class="select-div">
+              <select class="form" aria-label=".form-select-sm example">
+                <option selected disabled>Enter the system of unit</option>
+                <option value="imperial">imperial</option>
+                <option value="metric">metric</option>
+                <option value="standard">standard</option>
               </select>
+              <span id="select-span"></span>
+              <button class="item" type="submit"></button>
             </div>
+          </form>
+        </div>
+        <div class="secondpart">
+          <div class="hre2">
+            <select name="About Us" id="names">
+              <option id="head" selected hidden>About Us</option>
+              <option value="">Abhinay Sinha</option>
+              <option value="">Kshitij Agarwal</option>
+              <option value="">Ravindra Singh</option>
+              <option value="">Kunal Singh</option>
+              <option value="">Vishakha Kalra</option>
+              <option value="">Yashashvi</option>
+            </select>
           </div>
         </div>
       </header>
@@ -203,5 +197,7 @@
       </footer>
     </div>
     <script src="./js/index.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/logo.js"></script>
   </body>
 </html>
