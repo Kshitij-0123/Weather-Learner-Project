@@ -321,8 +321,9 @@ footer p{
         top:35%;
     }
     .all-para{
-        margin-top: 200px;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        margin: 200px auto 0 auto;
     }
     .temp,.wind-speed,.description,.pres-hum{
         display: inline-flex;
@@ -351,6 +352,11 @@ footer p{
     .chart_link{
         margin-top: 0;
         height: 85vh;
+    }
+    .latlon{
+        left:0;
+        right: 0;
+        margin: 0 auto;
     }
     
 }
