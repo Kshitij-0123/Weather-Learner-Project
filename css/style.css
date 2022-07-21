@@ -337,7 +337,7 @@ input{
     width: 100%;
     text-align: center;
 }
-.chart_link div{
+.chart,.link{
     margin: 80px auto;
     height: 200px;
     width:50%;
@@ -358,6 +358,10 @@ input{
 .chart_link p{
     margin-top: 20px;
     width:70%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.chart_link h2{
+    font-family: monospace;
 }
 .chart,.link{
     text-align: justify;
@@ -399,7 +403,7 @@ footer p{
     display: flex;
     justify-content: center;
 }
-@media screen and (max-width:770px) {
+@media screen and (max-width:770px) and (min-width:481px) {
     .all-para{
         margin-top: 80px;
         display: block;
@@ -450,4 +454,53 @@ footer p{
     .link img{
         margin-left:20px ;
     }
+}
+@media screen and (max-width:480px) {
+    .image .mainP h1,.image .mainP p{
+        margin: 30px auto;
+    }
+    .image:hover .mainP p,.glass:hover .mainP p,.latlon:hover .mainP p,.image:hover .mainP h1{
+        width:fit-content;
+        transform: translateY(-10px);
+    }
+    .image:hover .mainP h1{
+        margin:auto;
+    }
+    .latlon{
+        left:20%;
+        top:45%;
+    }
+    .all-para{
+        margin-top: 200px;
+        display: block;
+    }
+    .temp,.wind-speed,.description,.pres-hum{
+        display: inline-flex;
+        width: 80%;
+    }
+    .chart img,.link img{
+        float: none;
+        margin:auto ;
+        width: 40%;
+    }
+    .chart_link p{
+        margin: 0;
+        width: 100%;
+        text-align: justify;
+    }
+    .chart,.link{
+        text-align: center;
+        height: 200px;
+        width:100%;
+        padding: 10px;
+        margin-bottom: 100px;
+    }
+    .chart_link h2{
+        margin-bottom: 20px;
+    }
+    .chart_link{
+        margin-top: 0;
+        height: 85vh;
+    }
+    
 }
