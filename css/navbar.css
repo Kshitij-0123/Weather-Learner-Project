@@ -120,7 +120,8 @@ select:focus>option:checked {
 .logo {
     margin: 0 5px 0 15px;
     font-family: 'VT323', monospace;
-    color: rgba(255, 255, 255, 0.837)
+    color: rgba(255, 255, 255, 0.837);
+    transition: margin 1s cubic-bezier(0.49, 0.36, 0.09, 1.37);
 }
 
 .belo-nav {
