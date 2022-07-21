@@ -16,7 +16,7 @@ setTimeout(function () {
         for (let i = 0; i < sky.length; i++)
             sky[i].style.display = "none";
     }, 3000);
-}, 1000);
+}, 6000);
 btn.addEventListener("click", (event) => {
     btn.classList.add("clicked-s");
     event.preventDefault();

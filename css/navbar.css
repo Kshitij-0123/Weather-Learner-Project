@@ -56,14 +56,6 @@ nav {
     margin: 0 25px 0 0;
 }
 
-.search select {
-    padding: 5px 10px;
-    border: 1px rgba(149, 149, 149, 0.399) solid;
-    border-radius: 7px 7px 2px 2px;
-    height: 30px;
-    margin: 0 15px 0 25px;
-}
-
 .hre {
     padding: 15px;
     display: flex;
@@ -120,7 +112,8 @@ select:focus>option:checked {
 .logo {
     margin: 0 5px 0 15px;
     font-family: 'VT323', monospace;
-    color: rgba(255, 255, 255, 0.837)
+    color: rgba(255, 255, 255, 0.837);
+    transition: margin 1s cubic-bezier(0.49, 0.36, 0.09, 1.37);
 }
 
 .belo-nav {
@@ -128,6 +121,7 @@ select:focus>option:checked {
     justify-content: space-between;
     align-items: center;
     height: 50px;
+    position: relative;
 }
 
 .secondpart {
@@ -151,5 +145,93 @@ select:focus>option:checked {
 }
 
 .form {
+    padding: 5px 10px;
+    border: 1px rgba(149, 149, 149, 0.399) solid;
+    border-radius: 7px 7px 2px 2px;
+    height: 30px;
+    margin: 0 15px 0 25px;
     font-family: 'Mali', cursive;
+}
+
+#collapse-btn {
+    position: absolute;
+    right: 0;
+    top:10px;
+    /* transform: translateY(-25%); */
+    padding: 0;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0;
+    border: 0;
+    display: none;
+}
+
+.arrow {
+    height: 20px;
+    transition: all 0.2s;
+}
+.clicked{
+    transform: rotate(90deg);
+}
+
+@media screen and (max-width:575px) {
+    .search-div{
+        margin-right: 20px;
+    }
+    #collapse-btn {
+        display: block;
+        margin: 5px;
+    }
+    .secondpart{
+        display: block;
+    }
+    .belo-nav{
+        position: absolute;
+        top:50px;
+        display: block;
+        width: fit-content;
+        margin-right: 0;
+        height: 0px;
+        overflow: hidden;
+        transition: height 0.5s cubic-bezier(0.2, 1.2, 1, 1);
+        z-index: 1000;
+    }
+    #names {
+        position: relative;
+        height: 30px;
+        width: 100%;
+        margin: 0 auto 0 auto;
+        padding: 0 0;
+        border: 1px solid rgba(149, 149, 149, 0.399);
+        font-family: 'Mali', cursive;
+    }
+
+    .select-di {
+        margin: 0;
+        height: auto;
+    }
+    .select-di .search{
+        margin: 0;
+    }
+    .select-div{
+        height:30px;
+    }
+    #select-span {
+        position: absolute;
+        width: 20px;
+        height: 100%;
+        background-color: rgb(204, 204, 204);
+        top: 0px;
+        right: 0px;
+        pointer-events: none;
+    }
+    .form{
+        /* height: 30px; */
+        width: 95vw;
+        margin: 0 0 0 0;
+        padding: 0 0;
+    }
+    .image{
+        border-radius: 0px 0px 20px 20px !important;
+    }
 }
