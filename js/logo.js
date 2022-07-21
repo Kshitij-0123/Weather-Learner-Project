@@ -5,7 +5,7 @@ let modified = '\n          <span><i class="fa-solid fa-cloud-bolt"></i></span>\
 const resizeLogo = (logo, original, modified) => {
     if (window.innerWidth < 551) {
         logo.innerHTML = modified;
-        logo.style.marginLeft = "50px"
+        logo.style.marginLeft = "20px"
     }
     else {
         logo.innerHTML = original;
