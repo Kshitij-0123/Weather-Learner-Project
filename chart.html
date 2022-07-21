@@ -14,6 +14,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/loader.css" />
     <link rel="stylesheet" href="./css/chart.css" />
   </head>
@@ -34,34 +35,24 @@
       <div class="container-app">
         <header id="sec-1">
           <nav>
-            <ul>
-              <li><a href="./index.html">Home</a></li>
-              <li>
-                <form class="search">
-                  <input
-                    class="item"
-                    type="text"
-                    name="city"
-                    value=""
-                    placeholder="City Name"
-                  />
-                  <button class="item" type="submit">
-                    <i class="fa-solid fa-magnifying-glass fa-2x"></i>
-                  </button>
-                </form>
-              </li>
-              <li>
-                <select name="About Us" id="names">
-                  <option id="head" selected hidden>About Us</option>
-                  <option value="">Abhinay Sinha</option>
-                  <option value="">Kshitij Agarwal</option>
-                  <option value="">Ravindra Singh</option>
-                  <option value="">Kunal Singh</option>
-                  <option value="">Vishakha Kalra</option>
-                  <option value="">Yashashvi</option>
-                </select>
-              </li>
-            </ul>
+            <h1 class="logo">
+              <span><i class="fa-solid fa-cloud-bolt"></i></span> Weather
+              learner
+            </h1>
+            <div class="search-div">
+              <form class="search">
+                <input
+                  id="search"
+                  type="text"
+                  name="city"
+                  value=""
+                  placeholder="City Name"
+                />
+                <button class="item" type="submit">
+                  <img class="searchico a" src="./images/search.png" alt="" />
+                </button>
+              </form>
+            </div>
           </nav>
         </header>
         <div id="chart_back">
