@@ -4,66 +4,16 @@
     box-sizing: border-box;
   }
   body {
-    height: 80vh;
+    height: 100vh;
   }
 .container-app{
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     position: relative;
-}
-.container-app ul{
-    display: flex;
-    justify-content: right;
-    list-style-type: none;
-    background-color: #00ADB5;
-    box-shadow: 0px 1px 10px #888888;
-}
-.container-app li{
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-}
-.container-app li a,#head{
-    text-decoration: none;
-    color: #EEEEEE;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
-}
-#names{
-    padding: 10px 20px 10px 10px;
-    border-radius: 10px;
-    color: #EEEEEE;
-    background-color: #393E46;
-    font-weight: 900;
-}
-.container-app li option{
-    font-weight: 900;
-    color: #EEEEEE;
-}
-.search{
-    display: flex;
-    justify-content: space-evenly;
-}
-.search button{
-    border: none;
-    background-color: #00ADB5;
-}
-.search .item{
-    margin: 0 5px;
-}
-button:hover,.clicked-s{
-    opacity: 0.4;
-}
-input{
-    padding: 10px;
-    border-radius: 20px;
-    width: 220px;
-    border: 2px solid lightgrey;
 }
   #chart_back {
     width: 100%;
-    height: 91.5vh;
+    height: 93.3vh;
     transition: all 0.5s ease-out;
     display: flex;
     justify-content: center;
@@ -71,7 +21,6 @@ input{
     overflow: hidden;
   }
   .chartBox {
-    /* margin-top: 100px; */
     width: 80%;
     min-height: 450px;
     padding: 0 auto 0 auto;

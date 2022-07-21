@@ -13,9 +13,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-.fa-sun{
-    color: orangered !important;
-}
 html {
     scroll-padding-top: 70px;
     scroll-behavior: smooth;
@@ -275,7 +272,10 @@ input{
 .description{
     font-family: 'Major Mono Display', monospace;
     font-size: 80%;
-    padding-top: 20px;
+   
+}
+.description h3{
+    padding-top: 35px;
 }
 
 .temp h3::first-letter,.wind-speed h3::first-letter,.pres-hum h3::first-letter{

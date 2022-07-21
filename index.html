@@ -1,173 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/loader.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Weather Learner</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-  <link rel="stylesheet" href="./css/loader.css" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <title>Weather Learner</title>
-  <link rel="stylesheet" href="./css/navbar.css">
-
-</head>
-
-<body>
-  <div class="container-1">
-    <div class="cloud1"></div>
-    <div class="cloud2"></div>
-    <div class="cloud3"></div>
-    <div class="cloud4"></div>
-    <div class="cloud5"></div>
-    <div class="cloud6"></div>
-    <div class="main">
-      <i class="fa-solid fa-sun fa-4x"></i>
+  <body>
+    <div class="container-1">
+      <div class="cloud1"></div>
+      <div class="cloud2"></div>
+      <div class="cloud3"></div>
+      <div class="cloud4"></div>
+      <div class="cloud5"></div>
+      <div class="cloud6"></div>
+      <div class="main">
+        <i class="fa-solid fa-sun fa-4x"></i>
+      </div>
+      <h1 id="load">loading<span>...</span></h1>
     </div>
-    <h1 id="load">loading<span>...</span></h1>
-  </div>
-  <div class="container-app">
-    <header>
-      <nav>
-        <h1 class="logo">
-          <span><i class="fa-solid fa-cloud-bolt"></i></span> Weather learner
-        </h1>
-        <div class="search-div">
-          <form class="search">
-            <input id="search" type="text" name="city" value="" placeholder="City Name" />
-            <button class="item" type="submit">
-              <img class="searchico a" src="./images/search.png" alt="">
-            </button>
-          </form>
-        </div>
-      </nav>
-      <div class="belo-nav">
-        <div class="select-di">
+    <div class="container-app">
+      <header>
+        <nav>
+          <h1 class="logo">
+            <span><i class="fa-solid fa-cloud-bolt"></i></span> Weather learner
+          </h1>
           <div class="search-div">
             <form class="search">
-              <div class="select-div">
-                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                  <option selected disabled>Enter the system of unit</option>
-                  <option value="imperial">imperial</option>
-                  <option value="metric">metric</option>
-                  <option value="standard">standard</option>
-                </select>
-                <span id="select-span"></span>
-                <button class="item" type="submit">
-                </button>
-              </div>
+              <input
+                id="search"
+                type="text"
+                name="city"
+                value=""
+                placeholder="City Name"
+              />
+              <button class="item" type="submit">
+                <img class="searchico a" src="./images/search.png" alt="" />
+              </button>
             </form>
           </div>
-        </div>
+        </nav>
+        <div class="belo-nav">
+          <div class="select-di">
+            <div class="search-div">
+              <form class="search">
+                <div class="select-div">
+                  <select
+                    class="form-select form-select-sm"
+                    aria-label=".form-select-sm example"
+                  >
+                    <option selected disabled>Enter the system of unit</option>
+                    <option value="imperial">imperial</option>
+                    <option value="metric">metric</option>
+                    <option value="standard">standard</option>
+                  </select>
+                  <span id="select-span"></span>
+                  <button class="item" type="submit"></button>
+                </div>
+              </form>
+            </div>
+          </div>
 
-        <div class="secondpart">
-          <div id="sec-1" class="hre"><a href="#sec-4">Contact Us</a></div>
-          <div class="hre2">
-            <select name="About Us" id="names">
-              <option id="head" selected hidden>About Us</option>
-              <option value="">Abhinay Sinha</option>
-              <option value="">Kshitij Agarwal</option>
-              <option value="">Ravindra Singh</option>
-              <option value="">Kunal Singh</option>
-              <option value="">Vishakha Kalra</option>
-              <option value="">Yashashvi</option>
-            </select>
+          <div class="secondpart">
+            <div id="sec-1" class="hre"><a href="#sec-4">Contact Us</a></div>
+            <div class="hre2">
+              <select name="About Us" id="names">
+                <option id="head" selected hidden>About Us</option>
+                <option value="">Abhinay Sinha</option>
+                <option value="">Kshitij Agarwal</option>
+                <option value="">Ravindra Singh</option>
+                <option value="">Kunal Singh</option>
+                <option value="">Vishakha Kalra</option>
+                <option value="">Yashashvi</option>
+              </select>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <div class="latlon">
-      <div class="latC glass">
-        <h3></h3>
-        <h3></h3>
+      <div class="latlon">
+        <div class="latC glass">
+          <h3></h3>
+          <h3></h3>
+        </div>
       </div>
+      <div class="image">
+        <div class="mainP">
+          <p></p>
+          <h1></h1>
+        </div>
+        <div class="all-para">
+          <div class="temp glass">
+            <h3></h3>
+            <h3></h3>
+            <h3></h3>
+            <div class="sky">
+              <i class="fa-solid fa-cloud fa-4x"></i>
+            </div>
+          </div>
+          <div class="wind-speed glass">
+            <h3></h3>
+            <h3></h3>
+            <h3></h3>
+            <div class="sky">
+              <i class="fa-solid fa-cloud fa-4x"></i>
+            </div>
+          </div>
+          <div class="description glass">
+            <h3></h3>
+            <img src="" alt="image of weather icon" />
+            <div class="sky">
+              <i class="fa-solid fa-cloud fa-4x"></i>
+            </div>
+          </div>
+          <div class="pres-hum glass">
+            <h3></h3>
+            <h3></h3>
+            <div class="sky">
+              <i class="fa-solid fa-cloud fa-4x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chart_link" id="sec-3">
+        <div class="chart">
+          <img
+            src="./images/bar-chart.gif"
+            alt="it is a picture of chart"
+            usemap="#mychart"
+          />
+          <map name="mychart">
+            <area
+              shape="rect"
+              coords="0,0,256,256"
+              href="./chart.html"
+              target="_blank"
+              alt=""
+            />
+          </map>
+          <h2>Chart</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi rem a
+            sed at tenetur expedita reiciendis unde quae quasi optio. Dicta
+            explicabo praesentium nobis, necessitatibus earum sint vel. Est,
+            perspiciatis.
+          </p>
+        </div>
+        <div class="link">
+          <img
+            src="./images/global-warming.gif"
+            alt="it is a picture of earth"
+            usemap="#mylink"
+          />
+          <map name="mylink">
+            <area
+              shape="circle"
+              coords="121,121,121"
+              href="https://classic.nullschool.net/#current/wind/primary/waves/overlay=temp/orthographic=87.75,7.57,336/loc=77.899,27.480"
+              target="_blank"
+              alt=""
+              d
+            />
+          </map>
+          <h2>3D display</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+            id consequatur quae similique error et perspiciatis asperiores
+            incidunt magnam sit rerum iure dolorem, libero eveniet dolor.
+            Provident perspiciatis neque eaque.
+          </p>
+        </div>
+      </div>
+      <footer>
+        <div class="foot_main" id="sec-4">
+          <p>Contact Us</p>
+          <div class="ico_foot">
+            <i class="fa-brands fa-twitter fa-2x"></i>
+            <i class="fa-brands fa-linkedin fa-2x"></i>
+            <i class="fa-solid fa-cloud-sun fa-2x"></i>
+            <i class="fa-solid fa-envelope fa-2x"></i>
+          </div>
+          <div class="back_p">
+            <a href="#sec-1"><i class="fa-solid fa-arrow-up fa-2x"></i></a>
+          </div>
+        </div>
+      </footer>
     </div>
-    <div class="image">
-      <div class="mainP">
-        <p></p>
-        <h1></h1>
-      </div>
-      <div class="all-para">
-        <div class="temp glass">
-          <h3></h3>
-          <h3></h3>
-          <h3></h3>
-          <div class="sky">
-            <i class="fa-solid fa-cloud fa-4x"></i>
-          </div>
-        </div>
-        <div class="wind-speed glass">
-          <h3></h3>
-          <h3></h3>
-          <h3></h3>
-          <div class="sky">
-            <i class="fa-solid fa-cloud fa-4x"></i>
-          </div>
-        </div>
-        <div class="description glass">
-          <h3></h3>
-          <img src="" alt="image of weather icon" />
-          <div class="sky">
-            <i class="fa-solid fa-cloud fa-4x"></i>
-          </div>
-        </div>
-        <div class="pres-hum glass">
-          <h3></h3>
-          <h3></h3>
-          <div class="sky">
-            <i class="fa-solid fa-cloud fa-4x"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="chart_link" id="sec-3">
-      <div class="chart">
-        <img src="./images/bar-chart.gif" alt="it is a picture of chart" usemap="#mychart" />
-        <map name="mychart">
-          <area shape="rect" coords="0,0,256,256" href="./chart.html" target="_blank" alt="" />
-        </map>
-        <h2>Chart</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi rem a
-          sed at tenetur expedita reiciendis unde quae quasi optio. Dicta
-          explicabo praesentium nobis, necessitatibus earum sint vel. Est,
-          perspiciatis.
-        </p>
-      </div>
-      <div class="link">
-        <img src="./images/global-warming.gif" alt="it is a picture of earth" usemap="#mylink" />
-        <map name="mylink">
-          <area shape="circle" coords="121,121,121"
-            href="https://classic.nullschool.net/#current/wind/primary/waves/overlay=temp/orthographic=87.75,7.57,336/loc=77.899,27.480"
-            target="_blank" alt="" d />
-        </map>
-        <h2>3D display</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-          id consequatur quae similique error et perspiciatis asperiores
-          incidunt magnam sit rerum iure dolorem, libero eveniet dolor.
-          Provident perspiciatis neque eaque.
-        </p>
-      </div>
-    </div>
-    <footer>
-      <div class="foot_main" id="sec-4">
-        <p>Contact Us</p>
-        <div class="ico_foot">
-          <i class="fa-brands fa-twitter fa-2x"></i>
-          <i class="fa-brands fa-linkedin fa-2x"></i>
-          <i class="fa-solid fa-cloud-sun fa-2x"></i>
-          <i class="fa-solid fa-envelope fa-2x"></i>
-        </div>
-        <div class="back_p">
-          <a href="#sec-1"><i class="fa-solid fa-arrow-up fa-2x"></i></a>
-        </div>
-      </div>
-    </footer>
-  </div>
-  <script src="./js/index.js"></script>
-</body>
-
+    <script src="./js/index.js"></script>
+  </body>
 </html>
