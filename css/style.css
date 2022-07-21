@@ -19,7 +19,7 @@ html {
   }
 /* weather app css */
 .container-app{
-    width: 100%;
+    max-width: 100%;
     height: 100vh;
     position: relative;
 }
@@ -118,8 +118,8 @@ input{
     border: 2px solid lightgrey;
 }
 .image{
-    width:100%;
-    height: 600px;
+    max-width:100%;
+    min-height: 600px;
     background-size: cover;
     object-fit: cover;
     border-radius: 20px;
@@ -229,6 +229,7 @@ input{
 .temp,.wind-speed,.description,.pres-hum{
     margin: 30px;
     min-width: 300px;
+    min-height: 190px;
     border-radius: 30px;
     overflow: hidden;
     /* font-family: 'Major Mono Display', monospace; */
@@ -403,4 +404,56 @@ footer p{
     margin: 50px;
     display: flex;
     justify-content: center;
+}
+@media screen and (max-width:770px) {
+    .all-para{
+        margin-top: 80px;
+        display: block;
+    }
+    .temp{
+        display: inline-flex;
+        width: 40%;
+    }
+    .wind-speed{
+        display: inline-flex;
+        width: 40%;
+    }
+    .pres-hum{
+        display: inline-flex;
+        width: 40%;
+    }
+    .description{
+        display: inline-flex;
+        width: 40%;
+        position: relative;
+        bottom: 30px;
+    }
+    .latlon{
+        top:30%;
+        left:55%;
+    }
+    .mainP{
+        padding: 60px 0 0 60px;
+    }
+    .chart_link{
+        height: 75vh;
+    }
+    .search-div h1{
+        width: 100%;
+        margin: 25px 0 0 20px;
+        padding: 0;
+        font-size: 22px;
+    }
+    .chart_link div{
+        width:65%;
+    }
+    .chart p{
+        margin-left: 165px;
+    }
+    .chart_link img{
+        width:25%;
+    }
+    .link img{
+        margin-left:20px ;
+    }
 }
