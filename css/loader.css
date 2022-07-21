@@ -1,4 +1,4 @@
-.container-1{
+.container-1 {
     height: 100vh;
     width: 100%;
     display: flex;
@@ -9,97 +9,126 @@
     position: relative;
     overflow: hidden;
 }
-.main{
+
+.main {
     display: flex;
     transform: translateY(-200px);
     animation: y-axis 2s infinite ease-in-out;
     position: absolute;
-    left:400px;
+    left: 400px;
 }
-.main h1{
+
+.main h1 {
     padding: 10px 10px;
 }
-.fa-sun{
+
+.fa-sun {
     animation: x-axis 3s infinite linear;
     color: orangered;
 }
-#load span{
+
+#load span {
     animation: dot 1s linear infinite;
 }
+
 @keyframes dot {
-    0%{
+    0% {
         opacity: 0;
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 0;
     }
 }
+
 @keyframes x-axis {
-    50%{
+    50% {
         transform: translateX(700px) rotate(360deg);
     }
 }
+
 @keyframes y-axis {
-    50%{
+    50% {
         transform: translateY(200px);
     }
 }
-#load{
-    font-family:'IBM Plex Mono', monospace;;
+
+#load {
+    font-family: 'IBM Plex Mono', monospace;
+    ;
     letter-spacing: 5px;
     text-transform: uppercase;
 }
-.cloud1,.cloud2,.cloud3,.cloud4,.cloud5,.cloud6{
-    top:50px;
-    width:250px;
-    height:100px;
+
+.cloud1,
+.cloud2,
+.cloud3,
+.cloud4,
+.cloud5,
+.cloud6 {
+    top: 50px;
+    width: 250px;
+    height: 100px;
     background-color: white;
     border-radius: 100px;
 }
-.cloud1::before,.cloud2::before,.cloud3::before,.cloud4::before,.cloud5::before,.cloud6::before{
+
+.cloud1::before,
+.cloud2::before,
+.cloud3::before,
+.cloud4::before,
+.cloud5::before,
+.cloud6::before {
     content: '';
     position: absolute;
-    top:-50px;
-    left:30px;
-    width:100px;
+    top: -50px;
+    left: 30px;
+    width: 100px;
     height: 100px;
     background-color: white;
     border-radius: 50%;
     box-shadow: 40px 0 0 10px white;
 }
-.cloud1{
+
+.cloud1 {
     position: absolute;
-    top:150px;
-    left:300px;
+    top: 150px;
+    left: 300px;
     z-index: 10;
 }
-.cloud2{
+
+.cloud2 {
     position: absolute;
-    top:30px;
-    right:350px;
+    top: 30px;
+    right: 350px;
 }
-.cloud3{
+
+.cloud3 {
     position: absolute;
-    top:550px;
-    left:300px;
+    top: 550px;
+    left: 300px;
     z-index: 10;
 }
-.cloud4{
+
+.cloud4 {
     position: absolute;
-    left:-30px;
-    top:400px;
+    left: -30px;
+    top: 400px;
 }
-.cloud5{
+
+.cloud5 {
     position: absolute;
-    right:300px;
-    top:680px;
+    right: 300px;
+    top: 680px;
 }
-.cloud6{
+
+.cloud6 {
     position: absolute;
     right: 250px;
-    top:350px;
+    top: 350px;
     z-index: 10;
 }

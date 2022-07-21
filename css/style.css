@@ -4,23 +4,26 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     scroll-padding-top: 70px;
     scroll-behavior: smooth;
-  }
+}
+
 /* weather app css */
-.container-app{
+.container-app {
     max-width: 100%;
     height: 100vh;
     position: relative;
 }
-.image{
-    max-width:100%;
+
+.image {
+    max-width: 100%;
     min-height: 600px;
     background-size: cover;
     object-fit: cover;
@@ -29,15 +32,17 @@ html {
     justify-content: space-between;
     flex-direction: column;
 }
-.latlon{
+
+.latlon {
     position: absolute;
-    width:250px;
+    width: 250px;
     height: 250px;
     left: 42%;
-    top:25%;
+    top: 25%;
     text-align: center;
 }
-.latC{
+
+.latC {
     border-radius: 50%;
     height: 100%;
     display: flex;
@@ -47,21 +52,25 @@ html {
     flex-direction: column;
     transition: transform 0.5s cubic-bezier(0.78, 0.48, 0.11, 1.13);
 }
-.latC:hover{
+
+.latC:hover {
     transform: scale(1);
 }
-.glass{
+
+.glass {
     background: linear-gradient(135deg, rgba(47, 47, 47, 0.3), rgba(255, 255, 255, 0));
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     box-shadow: 0 8px 32px 0 rgba(17, 17, 17, 0.527);
     transition: all 0.5s cubic-bezier(0.78, 0.48, 0.11, 1.13);
 }
-.glass:hover{
+
+.glass:hover {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
-.latC h3{
+
+.latC h3 {
     display: inline;
     margin: 10px 0;
     font-family: 'Cormorant SC', serif;
@@ -70,45 +79,56 @@ html {
     color: rgb(214, 214, 214);
     text-shadow: 0 0 20px rgb(82, 81, 81);
 }
-.image .mainP h1{
+
+.image .mainP h1 {
     margin: 20px 0 0 20px;
     font-family: 'Josefin Sans', sans-serif;
     text-shadow: 0px 0 5px rgba(94, 94, 94, 0.379);
     color: rgba(1, 1, 1, 0.79);
     font-size: 200%;
     text-align: left;
-    width:fit-content;
+    width: fit-content;
     transition: all 0.4s cubic-bezier(0.62, 0.25, 0.34, 1.08);
 }
-.image .mainP h1::first-letter{
+
+.image .mainP h1::first-letter {
     font-size: 200%;
-    display: inline-block;  
+    display: inline-block;
 }
-.image:hover .mainP p,.glass:hover .mainP p,.latlon:hover .mainP p{
-    width:fit-content;
+
+.image:hover .mainP p,
+.glass:hover .mainP p,
+.latlon:hover .mainP p {
+    width: fit-content;
     transform: translate(20px);
 }
-.image:hover .mainP h1{
+
+.image:hover .mainP h1 {
     margin-left: 40px;
 }
 
-.mainP p{
-    width:fit-content;
+.mainP p {
+    width: fit-content;
     font-family: 'Josefin Sans', sans-serif;
     text-align: left;
     margin: 20px 0 0 20px;
     transition: transform 0.5s cubic-bezier(0.62, 0.25, 0.34, 1.08);
 }
-.mainP
-{
+
+.mainP {
     min-height: 200px;
 }
-.all-para{
+
+.all-para {
     min-height: 250px;
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
-.temp,.wind-speed,.description,.pres-hum{
+
+.temp,
+.wind-speed,
+.description,
+.pres-hum {
     margin: 30px;
     min-width: 300px;
     min-height: 190px;
@@ -124,233 +144,299 @@ html {
     flex-direction: column;
     justify-content: space-evenly;
     transform: scale(1);
-    transition:all 0.4s cubic-bezier(0.78, 0.48, 0.11, 1.13);
+    transition: all 0.4s cubic-bezier(0.78, 0.48, 0.11, 1.13);
     position: relative;
 }
+
 .sky {
-    background-color:skyblue;
+    background-color: skyblue;
     display: flex;
     justify-content: center;
     align-items: center;
-    position:absolute;
-    width:100%;
-    height:100%;
-  }
-  .sky i {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.sky i {
     color: white;
     animation: spin 2s ease-in-out infinite;
-  }
-  @keyframes spin {
+}
+
+@keyframes spin {
     0% {
-      transform: rotateY(0deg) rotate(0deg);
+        transform: rotateY(0deg) rotate(0deg);
     }
+
     50% {
-      transform: rotateY(180deg) rotate(360deg);
+        transform: rotateY(180deg) rotate(360deg);
     }
+
     100% {
-      transform: rotateY(360deg) rotate(0deg);
+        transform: rotateY(360deg) rotate(0deg);
     }
 }
-.description{
+
+.description {
     font-family: 'Major Mono Display', monospace;
     font-size: 80%;
-   
+
 }
-.description h3{
+
+.description h3 {
     padding-top: 35px;
 }
 
-.temp h3::first-letter,.wind-speed h3::first-letter,.pres-hum h3::first-letter{
+.temp h3::first-letter,
+.wind-speed h3::first-letter,
+.pres-hum h3::first-letter {
     font-size: 130%;
 }
 
-.temp:hover,.wind-speed:hover,.pres-hum:hover{
+.temp:hover,
+.wind-speed:hover,
+.pres-hum:hover {
     transform: scale(1.05);
 }
-.description img{
-    width:50%;
+
+.description img {
+    width: 50%;
     margin: 0 auto;
     transform: rotate(-20deg);
     animation: disc-img 1s cubic-bezier(0.46, 0.04, 0.53, 0.96) forwards infinite alternate;
 }
-@keyframes disc-img{
-    0%{
+
+@keyframes disc-img {
+    0% {
         transform: rotate(-10deg);
     }
-    100%{
+
+    100% {
         transform: rotate(10deg);
     }
 }
-.chart_link{
+
+.chart_link {
     margin-top: 100px;
     height: 65vh;
     width: 100%;
     text-align: center;
 }
-.chart,.link{
+
+.chart,
+.link {
     margin: 80px auto;
     height: 200px;
-    width:50%;
+    width: 50%;
 }
-.chart_link img{
-    width:20%;
+
+.chart_link img {
+    width: 20%;
 }
-.chart img{
+
+.chart img {
     float: left;
-    margin-right:50px;
+    margin-right: 50px;
 }
-.chart p{
-    margin-left:150px; ;
+
+.chart p {
+    margin-left: 150px;
+    ;
 }
-.link img{
+
+.link img {
     float: right;
 }
-.chart_link p{
+
+.chart_link p {
     margin-top: 20px;
-    width:70%;
+    width: 70%;
     font-family: Arial, Helvetica, sans-serif;
 }
-.chart_link h2{
+
+.chart_link h2 {
     font-family: monospace;
 }
-.chart,.link{
+
+.chart,
+.link {
     text-align: justify;
 }
 
 /*footer*/
-footer{
+footer {
     background-color: black;
     min-height: 250px;
     display: flex;
     justify-content: center;
 }
-.foot_main{
+
+.foot_main {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
 }
-footer p{
+
+footer p {
     color: gray;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-weight: 700;
 }
-.ico_foot{
+
+.ico_foot {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-top: 30px;
 }
-.foot_main  i{
+
+.foot_main i {
     color: gray;
     margin: 0 20px;
 }
-.foot_main i:hover{
+
+.foot_main i:hover {
     color: white;
 }
-.back_p{
+
+.back_p {
     margin: 50px;
     display: flex;
     justify-content: center;
 }
+
 @media screen and (max-width:770px) and (min-width:481px) {
-    .all-para{
+    .all-para {
         margin-top: 80px;
         display: block;
     }
-    .temp{
+
+    .temp {
         display: inline-flex;
         width: 40%;
     }
-    .wind-speed{
+
+    .wind-speed {
         display: inline-flex;
         width: 40%;
     }
-    .pres-hum{
+
+    .pres-hum {
         display: inline-flex;
         width: 40%;
     }
-    .description{
+
+    .description {
         display: inline-flex;
         width: 40%;
         position: relative;
         bottom: 30px;
     }
-    .latlon{
-        top:20%;
-        left:55%;
+
+    .latlon {
+        top: 20%;
+        left: 55%;
     }
-    .mainP{
+
+    .mainP {
         padding: 60px 0 0 60px;
     }
-    .chart_link{
+
+    .chart_link {
         height: 75vh;
     }
-    .search-div h1{
+
+    .search-div h1 {
         width: 100%;
         margin: 25px 0 0 20px;
         padding: 0;
         font-size: 22px;
     }
-    .chart_link div{
-        width:65%;
+
+    .chart_link div {
+        width: 65%;
     }
-    .chart p{
+
+    .chart p {
         margin-left: 165px;
     }
-    .chart_link img{
-        width:25%;
+
+    .chart_link img {
+        width: 25%;
     }
-    .link img{
-        margin-left:20px ;
+
+    .link img {
+        margin-left: 20px;
     }
 }
+
 @media screen and (max-width:480px) {
-    .image .mainP h1,.image .mainP p{
+
+    .image .mainP h1,
+    .image .mainP p {
         margin: 30px auto;
     }
-    .image:hover .mainP p,.glass:hover .mainP p,.latlon:hover .mainP p,.image:hover .mainP h1{
-        width:fit-content;
+
+    .image:hover .mainP p,
+    .glass:hover .mainP p,
+    .latlon:hover .mainP p,
+    .image:hover .mainP h1 {
+        width: fit-content;
         transform: translateY(-10px);
     }
-    .image:hover .mainP h1{
-        margin:auto;
+
+    .image:hover .mainP h1 {
+        margin: auto;
     }
-    .latlon{
-        left:20%;
-        top:35%;
+
+    .latlon {
+        left: 20%;
+        top: 35%;
     }
-    .all-para{
+
+    .all-para {
         margin-top: 200px;
         display: block;
     }
-    .temp,.wind-speed,.description,.pres-hum{
+
+    .temp,
+    .wind-speed,
+    .description,
+    .pres-hum {
         display: inline-flex;
         width: 80%;
     }
-    .chart img,.link img{
+
+    .chart img,
+    .link img {
         float: none;
-        margin:auto ;
+        margin: auto;
         width: 40%;
     }
-    .chart_link p{
+
+    .chart_link p {
         margin: 0;
         width: 100%;
         text-align: justify;
     }
-    .chart,.link{
+
+    .chart,
+    .link {
         text-align: center;
         height: 200px;
-        width:100%;
+        width: 100%;
         padding: 10px;
         margin-bottom: 100px;
     }
-    .chart_link h2{
+
+    .chart_link h2 {
         margin-bottom: 20px;
     }
-    .chart_link{
+
+    .chart_link {
         margin-top: 0;
         height: 85vh;
     }
-    
+
 }
