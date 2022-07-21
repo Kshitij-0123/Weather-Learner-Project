@@ -13,6 +13,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.fa-sun{
+    color: orangered !important;
+}
 html {
     scroll-padding-top: 70px;
     scroll-behavior: smooth;
@@ -23,64 +26,59 @@ html {
     height: 100vh;
     position: relative;
 }
-.container-app ul{
+/* .container-app ul{
     display: flex;
     justify-content: right;
     list-style-type: none;
     background-color: #00ADB5;
     box-shadow: 0px 1px 10px #888888;
-}
-.container-app li a,#head{
+} */
+/* .container-app li a,#head{
     text-decoration: none;
     color: #EEEEEE;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
-}
-#names{
+} */
+/* #names{
     padding: 10px;
     border-radius: 10px;
     color: #EEEEEE;
     background-color: #393E46;
     font-weight: 900;
-}
-.container-app li option{
+} */
+/* .container-app li option{
     font-weight: 900;
     color: #EEEEEE;
-}
-.container-app li{
+} */
+/* .container-app li{
     padding: 10px 20px;
     display: flex;
     align-items: center;
-}
-.container-app li a{
+} */
+/* .container-app li a{
     text-decoration: none;
     color: #EEEEEE;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-}
-.search-div{
+} */
+/* .search-div{
     display: flex;
     justify-content: space-between;
-}
-.search-div h1{
-    /* font-family: 'Shadows Into Light', cursive; */
-    /* font-family: 'Nunito Sans', sans-serif; */
-    /* font-family: 'Josefin Sans', sans-serif; */
-    /* font-family: 'Cormorant SC', serif; */
-    /* font-family: 'Cinzel', serif; */
+} */
+/* .search-div h1{
     margin-top: 15px;
     margin-left: 20px;
     margin-right: 50px;
     font-family: 'VT323', monospace;
     color: orangered;
     padding: 0 10px;
-}
-.container-app .search{
+} */
+/* .container-app .search{
     display: flex;
     justify-content: right;
-}
-.search button{
+} */
+/* .search button{
     border: none;
     background-color: white;
 }
@@ -89,26 +87,22 @@ select option[value=""]{
 }
 .search .item{
     margin: 20px 10px;
-}
+} */
 
-select{
+/* select{
     color: rgb(124, 124, 124);
     border: 2px solid lightgrey;
     margin: auto 30px auto 0;
     height: 40px;
     border-radius: 20px;
     padding: 5px 20px;
-}
-option{
+} */
+/* option{
     color: rgb(54, 54, 54);
-    /* font-family: 'Shadows Into Light', cursive; */
     font-family: 'Nunito Sans', sans-serif;
-    /* font-family: 'Josefin Sans', sans-serif; */
-    /* font-family: 'Cormorant SC', serif; */
-    /* font-family: 'Cinzel', serif; */
     font-size: small;
-}
-button:hover,.clicked-s{
+} */
+/* button:hover,.clicked-s{
     opacity: 0.4;
 }
 input{
@@ -116,7 +110,7 @@ input{
     border-radius: 20px;
     width: 220px;
     border: 2px solid lightgrey;
-}
+} */
 .image{
     max-width:100%;
     min-height: 600px;
