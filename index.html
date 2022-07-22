@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-    <link rel="stylesheet" href="./css/navbar.css" />
-    <link rel="stylesheet" href="./css/loader.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Weather Learner</title>
-  </head>
 
-  <body>
-    <div class="container-1">
-      <div class="cloud1"></div>
-      <div class="cloud2"></div>
-      <div class="cloud3"></div>
-      <div class="cloud4"></div>
-      <div class="cloud5"></div>
-      <div class="cloud6"></div>
-      <div class="main">
-        <i class="fa-solid fa-sun fa-4x"></i>
-      </div>
-      <h1 id="load">loading<span>...</span></h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="stylesheet" href="./css/navbar.css" />
+  <link rel="stylesheet" href="./css/loader.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Weather Learner</title>
+</head>
+
+<body>
+  <div class="container-1">
+    <div class="cloud1"></div>
+    <div class="cloud2"></div>
+    <div class="cloud3"></div>
+    <div class="cloud4"></div>
+    <div class="cloud5"></div>
+    <div class="cloud6"></div>
+    <div class="main">
+      <i class="fa-solid fa-sun fa-4x"></i>
     </div>
+    <h1 id="load">loading<span>...</span></h1>
+  </div>
   <div class="container-app">
     <header id="sec-1">
       <nav>
@@ -74,130 +72,100 @@
             </select>
           </div>
         </div>
-      </header>
+    </header>
 
-      <div class="latlon">
-        <div class="latC glass">
-          <h3></h3>
-          <h3></h3>
-        </div>
+    <div class="latlon">
+      <div class="latC glass">
+        <h3></h3>
+        <h3></h3>
       </div>
-      <div class="image">
-        <div class="mainP">
-          <p></p>
-          <h1></h1>
-        </div>
-        <div class="all-para">
-          <div class="temp glass">
-            <h3></h3>
-            <h3></h3>
-            <h3></h3>
-            <div class="sky">
-              <i class="fa-solid fa-cloud fa-4x"></i>
-            </div>
-          </div>
-          <div class="wind-speed glass">
-            <h3></h3>
-            <h3></h3>
-            <h3></h3>
-            <div class="sky">
-              <i class="fa-solid fa-cloud fa-4x"></i>
-            </div>
-          </div>
-          <div class="description glass">
-            <h3></h3>
-            <img src="" alt="image of weather icon" />
-            <div class="sky">
-              <i class="fa-solid fa-cloud fa-4x"></i>
-            </div>
-          </div>
-          <div class="pres-hum glass">
-            <h3></h3>
-            <h3></h3>
-            <div class="sky">
-              <i class="fa-solid fa-cloud fa-4x"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="chart_link" id="sec-3">
-        <div class="chart">
-          <img
-            src="./images/bar-chart.gif"
-            alt="it is a picture of chart"
-            usemap="#mychart"
-          />
-          <map name="mychart">
-            <area
-              shape="rect"
-              coords="0,0,256,256"
-              href="./chart.html"
-              target="_blank"
-              alt=""
-            />
-          </map>
-          <h2>Chart</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi rem a
-            sed at tenetur expedita reiciendis unde quae quasi optio. Dicta
-            explicabo praesentium nobis, necessitatibus earum sint vel. Est,
-            perspiciatis.
-          </p>
-        </div>
-        <div class="link">
-          <img
-            src="./images/global-warming.gif"
-            alt="it is a picture of earth"
-            usemap="#mylink"
-          />
-          <map name="mylink">
-            <area
-              shape="circle"
-              coords="78,78,58"
-              href="https://classic.nullschool.net/#current/wind/primary/waves/overlay=temp/orthographic=87.75,7.57,336/loc=77.899,27.480"
-              target="_blank"
-              alt=""
-              d
-            />
-          </map>
-          <h2>3D display</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-            id consequatur quae similique error et perspiciatis asperiores
-            incidunt magnam sit rerum iure dolorem, libero eveniet dolor.
-            Provident perspiciatis neque eaque.
-          </p>
-        </div>
-      </div>
-      <footer>
-        <div class="foot_main" id="sec-4">
-          <p>Contact Us</p>
-          <div class="ico_foot">
-            <a href="https://twitter.com/explore" target="_blank"
-              ><i class="fa-brands fa-twitter fa-2x"></i
-            ></a>
-            <a href="https://in.linkedin.com/" target="_blank"
-              ><i class="fa-brands fa-linkedin fa-2x"></i
-            ></a>
-            <a href="https://openweathermap.org/api" target="_blank"
-              ><i class="fa-solid fa-cloud-sun fa-2x"></i
-            ></a>
-            <a
-              href="https://mail.google.com/mail/?tab=rm&authuser=0&ogbl"
-              target=""
-              ><i class="fa-solid fa-envelope fa-2x"></i
-            ></a>
-          </div>
-          <div class="back_p">
-            <a href="#sec-1"
-              ><i title="Back to top" class="fa-solid fa-arrow-up fa-2x"></i
-            ></a>
-          </div>
-        </div>
-      </footer>
     </div>
-    <script src="./js/index.js"></script>
-    <script src="./js/navbar.js"></script>
-    <script src="./js/logo.js"></script>
-  </body>
+    <div class="image">
+      <div class="mainP">
+        <p></p>
+        <h1></h1>
+      </div>
+      <div class="all-para">
+        <div class="temp glass">
+          <h3></h3>
+          <h3></h3>
+          <h3></h3>
+          <div class="sky">
+            <i class="fa-solid fa-cloud fa-4x"></i>
+          </div>
+        </div>
+        <div class="wind-speed glass">
+          <h3></h3>
+          <h3></h3>
+          <h3></h3>
+          <div class="sky">
+            <i class="fa-solid fa-cloud fa-4x"></i>
+          </div>
+        </div>
+        <div class="description glass">
+          <h3></h3>
+          <img src="" alt="image of weather icon" />
+          <div class="sky">
+            <i class="fa-solid fa-cloud fa-4x"></i>
+          </div>
+        </div>
+        <div class="pres-hum glass">
+          <h3></h3>
+          <h3></h3>
+          <div class="sky">
+            <i class="fa-solid fa-cloud fa-4x"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chart_link" id="sec-3">
+      <div class="chart">
+        <img src="./images/bar-chart.gif" alt="it is a picture of chart" usemap="#mychart" />
+        <map name="mychart">
+          <area shape="rect" coords="0,0,256,256" href="./chart.html" target="_blank" alt="" />
+        </map>
+        <h2>Chart</h2>
+        <p>
+          A graph to predict the weather for the next 5 days with a very exciting and eye-catching UI using chart.js a
+          modern javascript library.
+          The API used is an excellent open-source API known as OpenWeatherMap
+        </p>
+      </div>
+      <div class="link">
+        <img src="./images/global-warming.gif" alt="it is a picture of earth" usemap="#mylink" />
+        <map name="mylink">
+          <area shape="circle" coords="78,78,58"
+            href="https://classic.nullschool.net/#current/wind/primary/waves/overlay=temp/orthographic=87.75,7.57,336/loc=77.899,27.480"
+            target="_blank" alt="" d />
+        </map>
+        <h2>Weather Visualizer</h2>
+        <p>
+          "earth" is a personal project by Cameron Beccario and Paul Irish based on the earlier Tokyo Wind Map project."earth" is a project to visualize global weather conditions. To access the site please press on the icon to the <span style="color:rgb(0, 146, 159); font-size: x-large;">right</span>
+          <br>
+          <br>
+          --credits : <a href="https://github.com/cambecc" target="_blank" style="color:rgb(0, 133, 145)">Cameron Beccario</a>
+        </p>
+      </div>
+    </div>
+    <footer>
+      <div class="foot_main" id="sec-4">
+        <p>Contact Us</p>
+        <div class="ico_foot">
+          <a href="https://twitter.com/explore" target="_blank"><i class="fa-brands fa-twitter fa-2x"></i></a>
+          <a href="https://in.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+          <a href="https://openweathermap.org/api" target="_blank"><i class="fa-solid fa-cloud-sun fa-2x"></i></a>
+          <a href="https://mail.google.com/mail/?tab=rm&authuser=0&ogbl" target=""><i
+              class="fa-solid fa-envelope fa-2x"></i></a>
+        </div>
+        <div class="back_p">
+          <a href="#sec-1"><i title="Back to top" class="fa-solid fa-arrow-up fa-2x"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="./js/index.js"></script>
+  <script src="./js/navbar.js"></script>
+  <script src="./js/logo.js"></script>
+</body>
+
 </html>

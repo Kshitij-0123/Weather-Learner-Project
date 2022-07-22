@@ -251,11 +251,12 @@ html {
 .chart_link p {
     margin-top: 20px;
     width: 70%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 900;
 }
 
 .chart_link h2 {
-    font-family: monospace;
+    font-family: 'Lobster Two', cursive;
 }
 
 .chart,
@@ -360,6 +361,7 @@ footer p {
 
     .chart p {
         margin-left: 165px;
+
     }
 
     .chart_link img {
@@ -372,11 +374,12 @@ footer p {
 }
 
 @media screen and (max-width: 740px) and (min-width: 651px) {
-    .latlon{
+    .latlon {
         margin: auto 0;
         top: 1000px;
         bottom: 0;
     }
+
     .image .mainP h1,
     .image .mainP p {
         margin: 30px auto;
@@ -393,9 +396,11 @@ footer p {
     .image:hover .mainP h1 {
         margin: auto;
     }
-    .all-para{
+
+    .all-para {
         width: 60%;
     }
+
     .mainP {
         padding: 0;
     }
@@ -419,11 +424,13 @@ footer p {
     .image:hover .mainP h1 {
         margin: auto;
     }
-    .all-para{
+
+    .all-para {
         display: flex;
         flex-direction: column;
         margin: 200px auto 0 auto;
     }
+
     .temp,
     .wind-speed,
     .description,
@@ -462,11 +469,12 @@ footer p {
         margin-top: 0;
         height: 85vh;
     }
-    .latlon{
-        left:0;
+
+    .latlon {
+        left: 0;
         right: 0;
         margin: 0 auto;
         top: 35%;
     }
-    
+
 }
