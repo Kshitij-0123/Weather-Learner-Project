@@ -14,12 +14,6 @@ body {
   height: 100vh;
 }
 
-.container-app {
-  width: 100%;
-  height: 90vh;
-  position: relative;
-}
-
 #chart_back {
   width: 100%;
   height: 93.3vh;
@@ -57,7 +51,6 @@ body {
 }
 
 .container-app {
-  position: absolute;
   width: 100%;
   height: 100%;
 }
@@ -77,8 +70,4 @@ body {
   padding: 10px;
   box-shadow: 10px 10px 10px gray;
   opacity: 0.4;
-}
-
-.posi_new {
-  position: absolute;
 }

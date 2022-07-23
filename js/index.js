@@ -18,17 +18,12 @@ setTimeout(function () {
     }, 3000);
 }, 6000);
 btn.addEventListener("click", (event) => {
-    btn.classList.add("clicked-s");
     event.preventDefault();
     cityV = city.value;
     let units = unit.value;
     console.log(units);
     fetch(URL + apiKey + "&q=" + cityV + "&units=" + units + "#").then((res) => { return res.json() }).then((data) => { addImage(data.weather[0].main); displayData(data, units) }).catch((error) => {console.log(error.message); alert("Enter valid name")});
     city.value = "";
-    setTimeout(() => {
-        btn.classList.remove("clicked-s");
-    }, 2000);
-
 });
 function addImage(mainW) {
     let image = document.querySelector(".image");
