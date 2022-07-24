@@ -217,7 +217,7 @@ html {
 }
 
 .chart_link {
-    margin-top: 100px;
+    margin-top: auto;
     height: 65vh;
     width: 100%;
     text-align: center;
@@ -443,7 +443,7 @@ footer p {
     .link img {
         float: none;
         margin: auto;
-        width: 40%;
+        width: 30%;
     }
 
     .chart_link p {
@@ -462,12 +462,13 @@ footer p {
     }
 
     .chart_link h2 {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .chart_link {
         margin-top: 0;
         height: 85vh;
+        margin-bottom: 40px;
     }
 
     .latlon {

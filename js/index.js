@@ -16,12 +16,11 @@ setTimeout(function () {
         for (let i = 0; i < sky.length; i++)
             sky[i].style.display = "none";
     }, 3000);
-}, 6000);
+}, 3000);
 btn.addEventListener("click", (event) => {
     event.preventDefault();
     cityV = city.value;
     let units = unit.value;
-    console.log(units);
     fetch(URL + apiKey + "&q=" + cityV + "&units=" + units + "#").then((res) => { return res.json() }).then((data) => { addImage(data.weather[0].main); displayData(data, units) }).catch((error) => {console.log(error.message); alert("Enter valid name")});
     city.value = "";
 });
@@ -112,16 +111,11 @@ function displayData(APID, units) {
 }
 window.addEventListener("load", () => {
     var urlLL = "";
-    window.navigator.geolocation.getCurrentPosition((position) => {
-        let lat = position.coords.latitude;
-        let lon = position.coords.longitude;
+        let lat = 27.5;
+        let lon = 77.6833;
         posFinder(lat, lon);
-        console.log(position);
         urlLL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&units=metric";
         fetch(urlLL).then((res) => { return res.json() }).then((data) => { addImage(data.weather[0].main); displayData(data, "metric") }).catch((error) => console.log(error.message));
-    });
-
-
 });
 function posFinder(lat, lon) {
     var h2Ar = document.querySelectorAll(".latC h3");

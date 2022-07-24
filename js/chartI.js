@@ -23,7 +23,7 @@ function exportdata(data) {
             Temp_main_night.push(data.list[i].main.temp);
 
     }
-    imageB = data.list[0].weather[0].main;
+    imageB = data.list[parseInt((24-new Date().getHours())/3)+3].weather[0].main;
     addChartBack(imageB);
     days.delete(allDay[new Date(data.list[0].dt_txt.slice(0, 11)).getDay()]);
     const label = Array.from(days);
@@ -61,7 +61,7 @@ function exportdata(data) {
                 }
             },
             scales: {
-                yAxis: [{
+                y: [{
                     ticks: {
                         beginAtZero: true
                     }
@@ -116,7 +116,6 @@ function addChartBack(word) {
         default: src = "";
             break;
     }
-    console.log(word);
     image.style.backgroundImage = "url(" + src + ")";
     image.style.backgroundSize = "cover";
     image.style.backgroundPosition = pos;
@@ -126,19 +125,15 @@ function canvasD(){
     document.querySelector(".chartBox").removeChild(canD);
 }
 function lat_lon(){
-    navigator.geolocation.getCurrentPosition((position) => {
-        let lat = position.coords.latitude;
-        let lon = position.coords.longitude;
+        let lat = 27.5;
+        let lon = 77.6833;
         let URL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&cnt=40&appid=baffe54e8405da80be9e6f51f7808cae&units=metric";
         fetch(URL).then((res) => { return res.json() }).then((data) => { exportdata(data); });
-    }, function () {
-        alert("Cannot get location");
-    }, { timeout: 20000, enableHighAccuracy: true });
     let cont2 = document.querySelector(".container-app");
     let cont1 = document.querySelector(".container-1");
     cont2.style.display = "none";
     setTimeout(function () {
         cont2.style.display = "block";
         cont1.style.display = "none";
-    }, 6000);
+    }, 3000);
 }

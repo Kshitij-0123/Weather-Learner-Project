@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon3.ico"
+      type="image/x-icon"
+    />
+    <title>About Us</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 130vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: radial-gradient(#c4e0e5, #4ca1afb5);
+        background-repeat: no-repeat;
+        object-fit: cover;
+      }
+      .main h1 {
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+      }
+      .main p {
+        text-align: center;
+        margin: 20px auto;
+        width: 50%;
+        font-weight: 800;
+        color: gray;
+      }
+      .members {
+        width: 50%;
+        flex-wrap: wrap;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-evenly;
+      }
+      .page {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        margin: 20px 0;
+        background-color: white;
+      }
+      .page h4 {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+      .pmain p {
+        text-align: center;
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        color: azure;
+        width: 90%;
+      }
+      .pmain p a {
+        text-decoration: none;
+      }
+      .page .pmain {
+        position: absolute;
+        display: none;
+        background: rgba(12, 12, 12, 0.58);
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px);
+        object-fit: cover;
+      }
+      .page:hover .pmain {
+        padding-top: 30px;
+        bottom: 1px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>About Us</h1>
+      <p>
+        We are the members of the Geeky Crowds.By mixing our knowledge we are
+        going to make a completeley awesome projects
+      </p>
+    </div>
+    <div class="members">
+      <div class="page">
+        <h4>Abhinay Sinha</h4>
+        <img src="./images/boy1.jpg" />
+        <div class="pmain">
+          <p>
+            I am a very devoted person and always tries to think out of the box
+            <br />
+            email:
+            <a href="mailto: abhinay.sinha_cs.aiml20@gla.ac.in"
+              >Abhinay Sinha</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="page">
+        <h4>Kshitij Agarwal</h4>
+        <img src="./images/boy2.jpg" />
+        <div class="pmain">
+          <p>
+            I Am Energetic and Have a Positive Attitude.
+            <br />
+            email:
+            <a href="mailto: kshitij.agarwal_cs.aiml20@gla.ac.in"
+              >Kshitij Agarwal</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="page">
+        <h4>Kunal Singh</h4>
+        <img src="./images/boy3.jpg" />
+        <div class="pmain">
+          <p>
+            I Am Highly Motivated and do all the work seriously.
+            <br />
+            email:
+            <a href="mailto: kunal.singh_cs.aiml20@gla.ac.in">Kunal Singh</a>
+          </p>
+        </div>
+      </div>
+      <div class="page">
+        <h4>Ravindra Singh</h4>
+        <img src="./images/boy4.jpg" />
+        <div class="pmain">
+          <p>
+            I thrive on challenge and constantly set goals for myself in every
+            tech field.
+            <br />
+            email:
+            <a href="mailto: ravindra.singh_cs.aiml20@gla.ac.in"
+              >Ravindra Singh</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="page">
+        <h4>Yashassvi Suhane</h4>
+        <img src="./images/girl1.jpg" />
+        <div class="pmain">
+          <p>
+            I am passionate about my work. Because I love what I do.
+            <br />
+            email:
+            <a href="mailto: yashassvi.suhane_cs20@gla.ac.in"
+              >Yashassvi Suhane</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="page">
+        <h4>Vishakha Kalra</h4>
+        <img src="./images/girl2.jpg" />
+        <div class="pmain">
+          <p>
+            I am someone who is consistently growing themselves and who takes
+            the time to continue learning.
+            <br />
+            email:
+            <a href="mailto: vishakha.kalra_cs.aiml20@gla.ac.in"
+              >Vishakha Kalra</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

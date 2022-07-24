@@ -10,5 +10,11 @@ arrow.addEventListener("click",()=>{
         arrow.classList.remove("clicked");
         collapse.style.height = ""
     }
-})
+});
+document.addEventListener("click", (event)=>{
+    if(!event.target.classList.contains("DontCollapse")){
+        arrow.classList.remove("clicked");
+        collapse.style.height = "";
+    }
+});
 

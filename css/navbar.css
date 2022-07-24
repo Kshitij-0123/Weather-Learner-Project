@@ -139,9 +139,19 @@ select:focus>option:checked {
     height: 30px;
     width: fit-content;
     margin: 0 20px 0 25px;
-    padding: 0 20px;
-    border: 1px solid rgba(149, 149, 149, 0.399);
+    padding: 5px 15px;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.216);
+    border-radius: 10px 0 10px 0;
     font-family: 'Mali', cursive;
+    transition: all 0.5s cubic-bezier(0.75, 0.63, 0.11, 0.96), color 0.001s ;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.54);
+}
+#names:hover{
+    background-color: rgba(128, 128, 128, 0.656);
+    color: white;
+    border-radius: 0 10px 0 10px;
+    box-shadow: 1px 2px 5px  rgba(0, 0, 0, 0.20);
 }
 
 .form {
@@ -201,9 +211,18 @@ select:focus>option:checked {
         height: 30px;
         width: 100%;
         margin: 0 auto 0 auto;
-        padding: 0 0;
-        border: 1px solid rgba(149, 149, 149, 0.399);
+        text-align: center;
+        /* padding: 0 0; */
+        border: none;
+        background-color:rgba(128, 128, 128, 1) ;
         font-family: 'Mali', cursive;
+        display: block;
+        border-radius: 0;
+    }
+    #names:hover{
+        border-radius: 0;
+        background-color:rgba(0,0,0, 1) ;
+        color: aliceblue;
     }
 
     .select-di {
