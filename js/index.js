@@ -21,6 +21,8 @@ btn.addEventListener("click", (event) => {
     event.preventDefault();
     cityV = city.value;
     let units = unit.value;
+    if(units==="")
+        units="metric";
     fetch(URL + apiKey + "&q=" + cityV + "&units=" + units + "#").then((res) => { return res.json() }).then((data) => { addImage(data.weather[0].main); displayData(data, units) }).catch((error) => {console.log(error.message); alert("Enter valid name")});
     city.value = "";
 });

@@ -135,5 +135,5 @@ function lat_lon(){
     setTimeout(function () {
         cont2.style.display = "block";
         cont1.style.display = "none";
-    }, 3000);
+    },3000);
 }
