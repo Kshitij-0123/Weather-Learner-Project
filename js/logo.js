@@ -1,5 +1,5 @@
 let logo = document.querySelector(".logo")
-let original = '\n          <span><i class="fa-solid fa-cloud-bolt"></i></span> Weather learner\n        ';
+let original = '\n          <span><i class="fa-solid fa-cloud-bolt"></i></span> Weather pad\n        ';
 let modified = '\n          <span><i class="fa-solid fa-cloud-bolt"></i></span>\n        ';
 
 const resizeLogo = (logo, original, modified) => {
