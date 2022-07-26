@@ -15,7 +15,7 @@ setTimeout(function () {
         let sky = document.querySelectorAll(".sky");
         for (let i = 0; i < sky.length; i++)
             sky[i].style.display = "none";
-    }, 3000);
+    }, 1000);
 }, 3000);
 btn.addEventListener("click", (event) => {
     event.preventDefault();
