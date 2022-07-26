@@ -21,9 +21,9 @@ btn.addEventListener("click", (event) => {
     event.preventDefault();
     cityV = city.value;
     let units = unit.value;
-    if(units==="")
-        units="metric";
-    fetch(URL + apiKey + "&q=" + cityV + "&units=" + units + "#").then((res) => { return res.json() }).then((data) => { addImage(data.weather[0].main); displayData(data, units) }).catch((error) => {console.log(error.message); alert("Enter valid name")});
+    if (units === "")
+        units = "metric";
+    fetch(URL + apiKey + "&q=" + cityV + "&units=" + units + "#").then((res) => { return res.json() }).then((data) => { addImage(data.weather[0].main); displayData(data, units) }).catch((error) => { console.log(error.message); alert("Enter valid name") });
     city.value = "";
 });
 function addImage(mainW) {
@@ -69,6 +69,15 @@ function addImage(mainW) {
             src = "./images/Thunderstorm.jpg";
             pos = "bottom";
             break;
+        case "Ash":
+            src = "./images/Ash.jpg";
+            break;
+        case "Tornado":
+            src = "./images/Tornado.jpg";
+            break;
+        case "Squall":
+            src = "./images/Squall.jpg";
+            break;
         default: src = "";
             break;
     }
@@ -113,11 +122,11 @@ function displayData(APID, units) {
 }
 window.addEventListener("load", () => {
     var urlLL = "";
-        let lat = 27.5;
-        let lon = 77.6833;
-        posFinder(lat, lon);
-        urlLL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&units=metric";
-        fetch(urlLL).then((res) => { return res.json() }).then((data) => { addImage(data.weather[0].main); displayData(data, "metric") }).catch((error) => console.log(error.message));
+    let lat = 27.5;
+    let lon = 77.6833;
+    posFinder(lat, lon);
+    urlLL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&units=metric";
+    fetch(urlLL).then((res) => { return res.json() }).then((data) => { addImage(data.weather[0].main); displayData(data, "metric") }).catch((error) => console.log(error.message));
 });
 function posFinder(lat, lon) {
     var h2Ar = document.querySelectorAll(".latC h3");

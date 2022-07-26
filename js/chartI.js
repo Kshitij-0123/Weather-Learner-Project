@@ -5,7 +5,7 @@ let search = document.querySelector("button");
 search.addEventListener("click", (event) => {
     event.preventDefault();
     let URL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city.value + "&cnt=40&appid=baffe54e8405da80be9e6f51f7808cae&units=metric";
-    fetch(URL).then((res) => { return res.json() }).then((data) => { canvasD(); exportdata(data); }).catch((error) => { console.log(error.message); alert("Enter valid name"); document.location.reload()});
+    fetch(URL).then((res) => { return res.json() }).then((data) => { canvasD(); exportdata(data); }).catch((error) => { console.log(error.message); alert("Enter valid name"); document.location.reload() });
     city.value = "";
 })
 function exportdata(data) {
@@ -23,7 +23,7 @@ function exportdata(data) {
             Temp_main_night.push(data.list[i].main.temp);
 
     }
-    imageB = data.list[parseInt((24-new Date().getHours())/3)+3].weather[0].main;
+    imageB = data.list[parseInt((24 - new Date().getHours()) / 3) + 3].weather[0].main;
     addChartBack(imageB);
     days.delete(allDay[new Date(data.list[0].dt_txt.slice(0, 11)).getDay()]);
     const label = Array.from(days);
@@ -113,6 +113,15 @@ function addChartBack(word) {
             src = "./images/Thunderstorm.jpg";
             pos = "bottom";
             break;
+        case "Ash":
+            src = "./images/Ash.jpg";
+            break;
+        case "Tornado":
+            src = "./images/Tornado.jpg";
+            break;
+        case "Squall":
+            src = "./images/Squall.jpg";
+            break;
         default: src = "";
             break;
     }
@@ -120,20 +129,20 @@ function addChartBack(word) {
     image.style.backgroundSize = "cover";
     image.style.backgroundPosition = pos;
 }
-function canvasD(){
+function canvasD() {
     let canD = document.getElementById("lineC");
     document.querySelector(".chartBox").removeChild(canD);
 }
-function lat_lon(){
-        let lat = 27.5;
-        let lon = 77.6833;
-        let URL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&cnt=40&appid=baffe54e8405da80be9e6f51f7808cae&units=metric";
-        fetch(URL).then((res) => { return res.json() }).then((data) => { exportdata(data); });
+function lat_lon() {
+    let lat = 27.5;
+    let lon = 77.6833;
+    let URL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&cnt=40&appid=baffe54e8405da80be9e6f51f7808cae&units=metric";
+    fetch(URL).then((res) => { return res.json() }).then((data) => { exportdata(data); });
     let cont2 = document.querySelector(".container-app");
     let cont1 = document.querySelector(".container-1");
     cont2.style.display = "none";
     setTimeout(function () {
         cont2.style.display = "block";
         cont1.style.display = "none";
-    },3000);
+    }, 3000);
 }
