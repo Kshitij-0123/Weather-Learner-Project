@@ -98,7 +98,7 @@ function displayData(APID, units) {
     var wind = document.querySelectorAll(".wind-speed h3");
     wind[0].innerHTML = "Wind speed: " + APID.wind.speed + unitS;
     wind[1].innerHTML = "Degree: " + APID.wind.deg + "°";
-    wind[2].innerHTML = "gust speed: " + APID.wind.gust + unitS;
+    wind[2].innerHTML = "gust speed: " + (typeof APID.wind.gust !== "undefined" ? APID.wind.gust : 0) + unitS;
     //for description
     var des = document.querySelectorAll(".description h3");
     des[0].innerHTML = APID.weather[0].description;
