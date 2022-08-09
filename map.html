@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon4.ico" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #map {
+        height: 100vh;
+      }
+      .leaflet-popup-content-wrapper{
+        height: auto;
+        width: 200px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+      }
+    </style>
+    <title>Weather Map</title>
+  </head>
+  <body>
+    <nav class="DontCollapse">
+      <h1 class="logo DontCollapse">
+        <span class="DontCollapse"
+          ><i class="fa-solid fa-cloud-bolt DontCollapse"></i
+        ></span>
+        Weather pad
+      </h1>
+      <div class="search-div DontCollapse">
+        <form class="search">
+          <input
+            class="DontCollapse"
+            id="search"
+            type="text"
+            name="city"
+            value=""
+            placeholder="City Name"
+          />
+          <button class="item DontCollapse" type="submit">              <img class="searchico a DontCollapse" src="./images/search.png" alt="" /></button>
+        </form>
+      </div>
+    </nav>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/map.js"></script>
+  </body>
+</html>

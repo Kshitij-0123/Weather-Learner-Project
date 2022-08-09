@@ -218,13 +218,14 @@ html {
 
 .chart_link {
     margin-top: auto;
-    height: 65vh;
+    height: 130vh;
     width: 100%;
     text-align: center;
 }
 
 .chart,
-.link {
+.link,
+.Wmap {
     margin: 80px auto;
     height: 200px;
     width: 50%;
@@ -234,12 +235,14 @@ html {
     width: 20%;
 }
 
-.chart img {
+.chart img,
+.Wmap img {
     float: left;
     margin-right: 50px;
 }
 
-.chart p {
+.chart p,
+.Wmap p {
     margin-left: 150px;
     ;
 }
@@ -260,7 +263,8 @@ html {
 }
 
 .chart,
-.link {
+.link,
+.Wmap {
     text-align: justify;
 }
 
@@ -345,7 +349,7 @@ footer p {
     }
 
     .chart_link {
-        height: 75vh;
+        height: 110vh;
     }
 
     .search-div h1 {
@@ -359,7 +363,8 @@ footer p {
         width: 65%;
     }
 
-    .chart p {
+    .chart p,
+    .Wmap p {
         margin-left: 165px;
 
     }
@@ -440,7 +445,8 @@ footer p {
     }
 
     .chart img,
-    .link img {
+    .link img,
+    .Wmap img {
         float: none;
         margin: auto;
         width: 30%;
@@ -453,7 +459,8 @@ footer p {
     }
 
     .chart,
-    .link {
+    .link,
+    .Wmap {
         text-align: center;
         height: 200px;
         width: 100%;
@@ -467,7 +474,7 @@ footer p {
 
     .chart_link {
         margin-top: 0;
-        height: 85vh;
+        height: 130vh;
         margin-bottom: 40px;
     }
 
