@@ -4,6 +4,8 @@ let city = document.querySelector("input");
 let search = document.querySelector("button");
 search.addEventListener("click", (event) => {
     event.preventDefault();
+    city = document.querySelector("input");
+    console.log(city);
     let URL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city.value + "&cnt=40&appid=baffe54e8405da80be9e6f51f7808cae&units=metric";
     fetch(URL).then((res) => { return res.json() }).then((data) => { canvasD(); exportdata(data); }).catch((error) => { console.log(error.message); alert("Enter valid name"); document.location.reload() });
     city.value = "";
